@@ -1,0 +1,878 @@
+/* ==========================================================
+   VARIABLES Y ESTILOS GENERALES (IDENTIDAD VISUAL RIWI)
+   ========================================================== */
+:root {
+    --verde-ruta: #1E7A4F;
+    --naranja-pedal: #F39A2B;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+    
+    --font-title: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 2rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--crema);
+    color: var(--gris-asfalto);
+    font-family: var(--font-text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-title);
+    color: var(--azul-noche);
+}
+
+a {
+    color: var(--verde-ruta);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--naranja-pedal);
+}
+
+/* Nota: El header utiliza la barra de navegación de Bootstrap 5.3 */
+
+/* ==========================================================
+   ESTILOS ESPECÍFICOS DE LA PÁGINA PRINCIPAL (INDEX)
+   ========================================================== */
+
+/* Banner con imagen de fondo */
+.banner-hero {
+    position: relative;
+    min-height: 520px;
+    background-image: url('../img/principal.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner-hero__overlay {
+    background: rgba(20, 33, 61, 0.45);
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--espacio-lg);
+}
+
+.banner-hero__content {
+    max-width: 650px;
+    color: #fff;
+    margin-top: var(--espacio-lg);
+}
+
+.banner-hero__content h1 {
+    color: #fff;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    margin-bottom: var(--espacio-sm);
+}
+
+.banner-hero__content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--espacio-md);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.banner-hero__content a {
+    color: var(--naranja-pedal);
+}
+
+.banner-hero .eyebrow {
+    color: var(--naranja-pedal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.boton-principal {
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: #fff !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton-principal:hover {
+    background-color: var(--naranja-pedal);
+    transform: translateY(-2px);
+}
+
+/* Tarjetas sobrepuestas en el Banner (Franja blanca compacta y proporcionada) */
+.hero-cards-overlay {
+    margin-top: var(--espacio-lg);
+    padding-bottom: var(--espacio-sm);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 160px));
+    gap: var(--espacio-md);
+    list-style: none;
+    max-width: 750px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 75px; 
+    overflow: hidden;
+    display: block; 
+    margin: 0;      
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+.card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 38px;
+    background-color: #fff;
+    color: var(--azul-noche);
+    padding: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.card-btn:hover {
+    background-color: var(--verde-ruta);
+    color: #fff;
+}
+
+.contenido-seccion {
+    padding: var(--espacio-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenido-seccion h2 {
+    margin-bottom: var(--espacio-md);
+    font-size: 1.8rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacio-lg);
+}
+
+.servicio-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    padding: var(--espacio-md);
+}
+
+.servicio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: var(--espacio-sm);
+}
+
+.como-alquilar ol, .beneficios ul {
+    padding-left: var(--espacio-lg);
+}
+
+.como-alquilar li, .beneficios li {
+    margin-bottom: var(--espacio-sm);
+}
+
+/* ==========================================================
+   ESTILOS ESPECÍFICOS DEL CARRUSEL CONTINUO Y FLOTA
+   ========================================================== */
+.bike-carousel-section {
+    padding: var(--espacio-lg) 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.bike-carousel-section h2 {
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+}
+
+/* Carrusel Animado Continuo */
+.bike-carousel {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    width: 100%;
+}
+
+.bike-carousel__track {
+    display: flex;
+    gap: var(--espacio-md);
+    animation: scroll-carousel 25s linear infinite;
+    width: max-content;
+}
+
+.bike-carousel__track:hover {
+    animation-play-state: paused;
+}
+
+.bike-carousel__group {
+    display: flex;
+    gap: var(--espacio-md);
+}
+
+@keyframes scroll-carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.bike-card {
+    background: var(--crema);
+    border: 1px solid #dcd6ce;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.bike-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.bike-card__details {
+    padding: var(--espacio-sm) var(--espacio-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.bike-card__details span {
+    font-size: 0.75rem;
+    color: var(--naranja-pedal);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bike-card__details h3 {
+    font-size: 1rem;
+    color: var(--azul-noche);
+}
+
+.bike-card__reference {
+    color: var(--gris-asfalto);
+    font-size: 0.8rem;
+}
+
+.flota-grid, .rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--espacio-lg);
+    margin-top: var(--espacio-md);
+}
+
+.modelo-card, .ruta-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modelo-card img, .ruta-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.modelo-card__contenido, .ruta-card div {
+    padding: var(--espacio-md);
+}
+
+.modelo-precio {
+    font-weight: bold;
+    color: var(--verde-ruta);
+    font-size: 1.1rem;
+    margin: var(--espacio-sm) 0;
+}
+
+.modelo-precio span {
+    font-size: 0.85rem;
+    color: var(--gris-asfalto);
+    font-weight: normal;
+}
+
+.boton-enlace {
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: var(--espacio-sm);
+    transition: background-color 0.2s ease;
+}
+
+.boton-enlace:hover {
+    background-color: var(--naranja-pedal);
+    color: #fff;
+}
+
+/* ==========================================================
+   ESTILOS DE HORARIOS, TABLAS Y WHATSAPP FLOTANTE
+   ========================================================== */
+.contenido-pagina {
+    padding: var(--espacio-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.horario-seccion h1 {
+    font-size: 2rem;
+    color: var(--azul-noche);
+    margin-bottom: var(--espacio-sm);
+    text-align: center;
+}
+
+.descripcion-seccion {
+    text-align: center;
+    color: var(--gris-asfalto);
+    margin-bottom: var(--espacio-lg);
+}
+
+/* Tablas Accesibles */
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-bottom: var(--espacio-lg);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+    min-width: 480px;
+}
+
+caption {
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--azul-noche);
+    padding: var(--espacio-sm);
+    caption-side: top;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    padding: 1rem;
+    font-family: var(--font-title);
+}
+
+tbody th, tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody th {
+    background-color: #f3efe6;
+    color: var(--azul-noche);
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #faf6f0;
+}
+
+.enlace-contacto {
+    color: var(--verde-ruta);
+    font-weight: bold;
+}
+
+.enlace-contacto:hover {
+    color: var(--naranja-pedal);
+}
+
+/* Lista de Horarios (dl, dt, dd) */
+.lista-horarios-card {
+    background: #ffffff;
+    padding: var(--espacio-lg);
+    border-radius: 8px;
+    border-left: 5px solid var(--verde-ruta);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.lista-horarios-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: var(--espacio-md);
+    color: var(--azul-noche);
+}
+
+.horario-dl dt {
+    font-weight: bold;
+    color: var(--azul-noche);
+    margin-top: var(--espacio-sm);
+}
+
+.horario-dl dd {
+    margin-left: 0;
+    margin-bottom: var(--espacio-sm);
+    color: var(--gris-asfalto);
+}
+
+/* Enlace Flotante de WhatsApp Obligatorio */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #ffffff !important;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: var(--font-text);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.whatsapp-btn:hover, .whatsapp-btn:focus {
+    background-color: #1eb855;
+    transform: scale(1.05);
+}
+
+/* ==========================================================
+   ESTILOS MEJORADOS PARA EL FORMULARIO DE RESERVAS
+   ========================================================== */
+#reservas {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--espacio-md) 0;
+}
+
+#formulario_reserva {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.reservas_contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tarjeta_reserva {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #fcfbf9;
+    margin: 0;
+}
+
+.tarjeta_reserva legend {
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--azul-noche);
+    font-size: 1.15rem;
+    padding: 0 0.6rem;
+    background: var(--crema);
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+.campo label, 
+.campo .etiqueta {
+    font-weight: 600;
+    color: var(--azul-noche);
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.campo label span, 
+.campo .etiqueta span {
+    color: var(--naranja-pedal);
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    color: var(--azul-noche);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--verde-ruta);
+    box-shadow: 0 0 0 3px rgba(30, 122, 79, 0.15);
+}
+
+.campo small {
+    font-size: 0.8rem;
+    color: var(--gris-asfalto);
+    margin-top: 0.35rem;
+}
+
+/* Opciones tipo tarjeta para Radio Buttons */
+.opciones_bicicleta,
+.opciones_plan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+}
+
+.opcion_tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 0.4rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.opcion_tarjeta input[type="radio"] {
+    display: none;
+}
+
+.opcion_icono {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+}
+
+.opcion_tarjeta:has(input[type="radio"]:checked) {
+    border-color: var(--verde-ruta);
+    background-color: #eaf5ef;
+    color: var(--verde-ruta);
+    box-shadow: 0 2px 6px rgba(30, 122, 79, 0.15);
+}
+
+/* Acciones y Botones */
+.reservas_acciones {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.aceptar_politicas {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.aceptar_politicas input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--verde-ruta);
+    cursor: pointer;
+}
+
+.botones_reserva {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.boton_enviar,
+.boton_limpiar {
+    padding: 0.85rem 2rem;
+    border-radius: 6px;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+}
+
+.boton_enviar {
+    background-color: var(--verde-ruta);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(30, 122, 79, 0.25);
+}
+
+.boton_enviar:hover {
+    background-color: #165b3b;
+    transform: translateY(-1px);
+}
+
+.boton_limpiar {
+    background-color: transparent;
+    color: var(--gris-asfalto);
+    border: 1.5px solid #cbd5e1;
+}
+
+.boton_limpiar:hover {
+    background-color: #f1f5f9;
+    color: var(--azul-noche);
+}
+
+/* ==========================================================
+   PIE DE PÁGINA
+   ========================================================== */
+.site-footer {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+    padding: var(--espacio-lg);
+    text-align: center;
+    margin-top: var(--espacio-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--espacio-md);
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espacio-md);
+    margin: 0;
+    padding: 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--verde-ruta);
+    border-radius: 50%;
+    padding: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--naranja-pedal);
+}
+
+.social-btn svg {
+    fill: var(--crema);
+    width: 100%;
+    height: 100%;
+}
+
+.footer-about {
+    text-align: center;
+    max-width: 600px;
+}
+
+.footer-about h2 {
+    color: var(--crema);
+}
+
+.footer-about p {
+    color: var(--crema);
+    font-size: 0.95rem;
+}
+
+.footer-about a {
+    color: var(--naranja-pedal);
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   CORRECCIÓN ESTRICTA PARA EL CARRUSEL DE BOOTSTRAP 5.3
+   ========================================================== */
+#promoCarousel .carousel-item {
+    display: none !important;
+}
+
+#promoCarousel .carousel-item.active {
+    display: block !important;
+}
+
+/* ==========================================================
+   ADAPTABILIDAD RESPONSIVE (MEDIA QUERIES)
+   ========================================================== */
+@media (max-width: 768px) {
+    .banner-hero {
+        min-height: 440px;
+    }
+
+    .banner-hero__overlay {
+        padding: var(--espacio-md);
+        min-height: 440px;
+    }
+
+    .banner-hero__content h1 {
+        font-size: 1.6rem;
+    }
+
+    .banner-hero__content p {
+        font-size: 1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #formulario_reserva {
+        padding: 1.5rem;
+    }
+
+    .reservas_contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .opciones_bicicleta,
+    .opciones_plan {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .contenido-pagina {
+        padding: 1rem 0.75rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .horario-seccion h1 {
+        font-size: 1.5rem;
+    }
+
+    .tabla-contenedor {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1.5rem;
+        display: block;
+        border-radius: 8px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 450px;
+    }
+
+    .botones_reserva {
+        flex-direction: column;
+    }
+
+    .boton_enviar, 
+    .boton_limpiar {
+        width: 100%;
+    }
+}

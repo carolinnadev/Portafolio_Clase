@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #202b35;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fa;
+}
+
+#panel {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 15px 0 25px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user_icon {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    place-items: center;
+    background-color: #e51b3e;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 0.5s ease;
+}
+
+#user_icon:hover {
+    background-color: #1bc7e5;
+}
+
+.icon {
+    width: 23px;
+    height: 23px;
+    stroke: white;
+    fill: white;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#conferencistas {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    border: 1px solid #e51b3e;
+    box-shadow: 1px 1px 6px rgba(197, 41, 67, 0.3);
+    background-color: #bb9298b7;
+    transition: 0.5s ease;
+}
+
+.tarjeta:hover {
+    border-radius: 5px;
+    border: 1px solid #1bc7e5;
+    box-shadow: 1px 1px 6px rgba(27, 199, 229, 0.4);
+    background-color: #90c5ceab;
+}
+
+.retrato {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 12px;
+    object-fit: cover;
+    object-position: center top;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+h2 {
+    margin: 0 0 3px;
+    font-size: 16px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    color: #d91f43;
+    font-size: 14px;
+    transition: 0.5s ease;
+}
+
+h3:hover {
+    color: #127c8f;
+}
+
+.tarjeta p {
+    width: 100%;
+    max-width: 230px;
+    min-height: 60px;
+    margin: 0 0 15px;
+    padding: 0 5px;
+    color: #73777b;
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.redes a {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    background: #d91f43;
+    color: white;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.redes a:hover {
+    background: #28a8d2;
+}
+
+#mas_informacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 40px auto;
+    padding: 12px 24px;
+    border: 1px solid #e51b3e;
+    border-radius: 20px;
+    background: #bb9298b7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 6px rgba(229, 27, 62, 0.3);
+    transition: 0.5s ease;
+}
+
+#mas_informacion:hover {
+    border-radius: 5px;
+    border: 1px solid #1bc7e5;
+    box-shadow: 1px 1px 6px rgba(27, 199, 229, 0.4);
+    background-color: #90c5ceab;
+}
+
+#mas_informacion .icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Ajustes finos para pantallas muy pequeñas (como móviles compactos) */
+@media (max-width: 480px) {
+    #panel {
+        padding: 12px;
+    }
+
+    header {
+        margin-left: 5px;
+    }
+
+    #conferencistas {
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .retrato {
+        width: 150px;
+        height: 150px;
+    }
+}

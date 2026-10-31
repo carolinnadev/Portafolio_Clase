@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Servicios | EcoAura</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Hoja de estilos externa -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+        <!-- Encabezado y Navegación -->
+        <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center gap-2">
+                    🌱 <span>EcoAura</span>
+                </a>
+                <nav aria-label="Navegación principal">
+                    <ul class="flex space-x-6 font-medium">
+                        <li><a href="index.html" class="hover:text-amber-300 transition">Inicio</a></li>
+                        <li><a href="servicios.html" class="text-amber-300 hover:text-white transition">Servicios</a></li>
+                        <li><a href="contacto.html" class="hover:text-amber-300 transition">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="flex-grow container mx-auto px-4 py-12">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl font-extrabold text-emerald-900 mb-4">Catálogo de Servicios</h1>
+                <p class="text-lg text-gray-600">Soluciones sostenibles e innovadoras a la medida de tus necesidades en Medellín y el Valle de Aburrá.</p>
+            </header>
+
+            <!-- Rejilla de Servicios (8 Tarjetas) -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Servicio 1: Parques Solares -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5V_OFRyZ9hVxqVOXlZnt1Zq0BgO-OyiHj4gGndYRijgEbg5PbA6YqWfI&s=10" alt="Parques Solares" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 py-1 px-3 rounded-full">Energía</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Parques Solares</h2>
+                            <p class="text-gray-600 text-sm mb-3">Diseño e instalación de sistemas fotovoltaicos a gran y mediana escala.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Guayabal, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Cotización a medida</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 2: Cero Residuos Urbano -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://thumbs.dreamstime.com/b/captura-de-pantalla-del-centro-compost-urbano-tecnolog%C3%ADa-verde-reciclaje-la-producci%C3%B3n-residuos-cero-preservaci%C3%B3n-ecolog%C3%ADa-381192903.jpg" alt="Cero Residuos Urbano" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-800 py-1 px-3 rounded-full">Compostaje</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Cero Residuos Urbano</h2>
+                            <p class="text-gray-600 text-sm mb-3">Programas de reciclaje y gestión integral de desechos para comunidades.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Laureles, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Desde $150 USD</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 3: Jardines Verticales -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://thursd.com/storage/media/77443/View-of-One-Central-Park-architectural-and-green-building.jpg" alt="Jardines Verticales" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-800 py-1 px-3 rounded-full">Biofilia</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Jardines Verticales</h2>
+                            <p class="text-gray-600 text-sm mb-3">Muros verdes interiores y exteriores con riego automatizado sustentable.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>El Poblado, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Desde $250 USD</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 4: Auditoría Verde -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnz-FiiV1EGGwFZ-Y7MB0CnomU8T0nnIzNOPLUs2kjsi4PfvPYi_-FHW_g&s=10" alt="Auditoría Verde" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 py-1 px-3 rounded-full">Eficiencia</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Auditoría Verde</h2>
+                            <p class="text-gray-600 text-sm mb-3">Evaluación de consumo energético para reducir tu huella y gastos hasta un 40%.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Centro, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">$120 USD</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 5: Energía Eólica Micro -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/8aaa8e_52a125d26e694935a0cffdf1cc47d71a~mv2.jpg/v1/fill/w_568,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8aaa8e_52a125d26e694935a0cffdf1cc47d71a~mv2.jpg" alt="Energía Eólica Micro" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 py-1 px-3 rounded-full">Innovación</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Energía Eólica Micro</h2>
+                            <p class="text-gray-600 text-sm mb-3">Turbinas de viento compactas para optimizar la generación de energía limpia.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Envigado, Antioquia</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Cotización a medida</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 6: Reforestación Urbana -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/0936de_747dfdc543224c3c8887572d379d14c5~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0936de_747dfdc543224c3c8887572d379d14c5~mv2.jpg" alt="Reforestación Urbana" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-800 py-1 px-3 rounded-full">Ecología</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Reforestación Urbana</h2>
+                            <p class="text-gray-600 text-sm mb-3">Proyectos comunitarios e institucionales de siembra de árboles autóctonos.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Aranjuez, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Desde $300 USD</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 7: Huertos Orgánicos -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZyiVana7J9jJTQliUEdXddYhypBkfAzyZJr2up-OsddiKWOobbehcpY&s=10" alt="Huertos Orgánicos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-emerald-100 text-emerald-800 py-1 px-3 rounded-full">Agroecológico</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Huertos Orgánicos</h2>
+                            <p class="text-gray-600 text-sm mb-3">Creación y capacitación para cultivos orgánicos en casas y terrazas.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Belén, Medellín</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Desde $180 USD</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 8: Electromovilidad -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="https://www.energiaadebate.com/file/1138/index.jpg" alt="Electromovilidad" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold uppercase tracking-wider bg-amber-100 text-amber-800 py-1 px-3 rounded-full">Movilidad</span>
+                            <h2 class="text-xl font-bold text-gray-900 mt-3 mb-2">Electromovilidad</h2>
+                            <p class="text-gray-600 text-sm mb-3">Instalación de estaciones de carga eficientes para vehículos eléctricos.</p>
+                            
+                            <!-- Ubicación -->
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 w-fit">
+                                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Sabaneta, Antioquia</span>
+                            </div>
+                        </div>
+                        <p class="text-emerald-700 font-bold text-lg">Cotización a medida</p>
+                    </div>
+                    <div class="p-4 bg-gray-50 border-t border-gray-100">
+                        <a href="contacto.html" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-medium py-2 px-4 rounded transition text-sm">Solicitar Información</a>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+            <div class="container mx-auto px-4">
+                <p>&copy; 2026 EcoAura. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

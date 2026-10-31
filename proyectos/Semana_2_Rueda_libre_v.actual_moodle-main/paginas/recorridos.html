@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descubre los recorridos guiados de Rueda Libre en Medellín. Conoce sus distancias, duración, dificultad y precios.">
+        <title>Rueda Libre | Recorridos Guiados</title>
+
+        <!-- 1. Bootstrap 5.3 CSS por CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        
+        <!-- Hoja de estilos propia -->
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm w-100">
+                <div class="container">
+                    <a class="navbar-brand fw-bold font-monospace text-warning" href="../index.html">
+                        <i class="bi bi-bicycle me-2"></i>Rueda Libre
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="horario.html">Horario</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="recorridos.html">Recorridos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tarifas.html">Tarifas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="reserva.html">Reservas</a></li>
+                            <li class="nav-item">
+                                <select name="menu" id="menu-select" class="form-select form-select-sm bg-success text-white border-0" aria-label="Menú de páginas" onchange="if (this.value) window.location.href = this.value">
+                                    <option value="" class="bg-white text-dark">Menú</option>
+                                    <option value="catalogo.html" class="bg-white text-dark">Bicicletas</option>
+                                    <option value="reparar.html" class="bg-white text-dark">Reparar</option>
+                                    <option value="nosotros.html" class="bg-white text-dark">Nosotros</option>
+                                    <option value="localizanos.html" class="bg-white text-dark">Localízanos</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main id="pagina_recorridos" class="contenido-pagina my-5">
+
+            <section id="introduccion_recorridos" class="container" style="text-align: center; margin-bottom: 2.5rem;">
+                <h1>Recorridos guiados</h1>
+
+                <p class="descripcion-seccion">
+                    Explora Medellín sobre dos ruedas y descubre sus parques,
+                    barrios y paisajes con nuestros recorridos guiados.
+                    Elige la ruta que mejor se adapte a tu experiencia.
+                </p>
+
+                <a href="tarifas.html#recorridos" class="boton-principal">
+                    Consultar tarifas
+                </a>
+            </section>
+
+            <section id="lista_recorridos" class="container" style="margin-bottom: 3rem;">
+                <h2>Elige tu próxima aventura</h2>
+
+                <div class="recorridos_contenedor rutas-grid">
+
+                    <!-- Ruta 1: Río y Parques -->
+                    <article class="tarjeta_recorrido ruta-card">
+                        <img
+                            src="../img/ruta-parques.jpg"
+                            alt="Paisaje verde de un parque durante un recorrido en bicicleta"
+                            width="600"
+                        >
+
+                        <div class="recorrido_contenido" style="padding: 1.5rem;">
+                            <span class="nivel_recorrido nivel_facil" style="color: var(--verde-ruta); font-weight: bold; text-transform: uppercase; font-size: 0.85rem;">Nivel fácil</span>
+
+                            <h3 style="margin: 0.5rem 0;">Río y Parques</h3>
+
+                            <p style="margin-bottom: 1rem;">
+                                Disfruta un paseo tranquilo entre zonas verdes
+                                y parques. Una ruta ideal para quienes desean
+                                explorar la ciudad a un ritmo relajado.
+                            </p>
+
+                            <ul class="datos_recorrido" style="list-style: none; padding: 0; margin-bottom: 1rem;">
+                                <li><strong>Distancia:</strong> 12 km</li>
+                                <li><strong>Duración:</strong> 2 horas</li>
+                                <li><strong>Dificultad:</strong> Fácil</li>
+                            </ul>
+
+                            <p class="precio_recorrido modelo-precio">
+                                $45.000 <span>por persona</span>
+                            </p>
+
+                            <a href="reserva.html" class="boton-enlace" style="display: block; width: 100%; text-align: center; margin-top: 1rem;">
+                                Reservar recorrido
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 2: Sabores de Barrio -->
+                    <article class="tarjeta_recorrido ruta-card">
+                        <img
+                            src="../img/ruta-parques.jpg"
+                            alt="Calles y espacios urbanos de Medellín para descubrir en bicicleta"
+                            width="600"
+                        >
+
+                        <div class="recorrido_contenido" style="padding: 1.5rem;">
+                            <span class="nivel_recorrido nivel_medio" style="color: var(--naranja-pedal); font-weight: bold; text-transform: uppercase; font-size: 0.85rem;">Nivel medio</span>
+
+                            <h3 style="margin: 0.5rem 0;">Sabores de Barrio</h3>
+
+                            <p style="margin-bottom: 1rem;">
+                                Recorre diferentes sectores de Medellín y
+                                conoce su ambiente urbano en una experiencia
+                                pensada para quienes buscan una aventura más larga.
+                            </p>
+
+                            <ul class="datos_recorrido" style="list-style: none; padding: 0; margin-bottom: 1rem;">
+                                <li><strong>Distancia:</strong> 18 km</li>
+                                <li><strong>Duración:</strong> 3 horas</li>
+                                <li><strong>Dificultad:</strong> Medio</li>
+                            </ul>
+
+                            <p class="precio_recorrido modelo-precio">
+                                $60.000 <span>por persona</span>
+                            </p>
+
+                            <a href="reserva.html" class="boton-enlace" style="display: block; width: 100%; text-align: center; margin-top: 1rem;">
+                                Reservar recorrido
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Ruta 3: Reto Las Palmas -->
+                    <article class="tarjeta_recorrido ruta-card">
+                        <img
+                            src="../img/ruta-montana.jpg"
+                            alt="Paisaje de montaña en una ruta exigente para ciclistas"
+                            width="600"
+                        >
+
+                        <div class="recorrido_contenido" style="padding: 1.5rem;">
+                            <span class="nivel_recorrido nivel_dificil" style="color: #d9534f; font-weight: bold; text-transform: uppercase; font-size: 0.85rem;">Nivel difícil</span>
+
+                            <h3 style="margin: 0.5rem 0;">Reto Las Palmas</h3>
+
+                            <p style="margin-bottom: 1rem;">
+                                Pon a prueba tu resistencia con un recorrido
+                                exigente y disfruta los paisajes de montaña
+                                durante una aventura de mayor duración.
+                            </p>
+
+                            <ul class="datos_recorrido" style="list-style: none; padding: 0; margin-bottom: 1rem;">
+                                <li><strong>Distancia:</strong> 25 km</li>
+                                <li><strong>Duración:</strong> 4 horas</li>
+                                <li><strong>Dificultad:</strong> Difícil</li>
+                            </ul>
+
+                            <p class="precio_recorrido modelo-precio">
+                                $85.000 <span>por persona</span>
+                            </p>
+
+                            <a href="reserva.html" class="boton-enlace" style="display: block; width: 100%; text-align: center; margin-top: 1rem;">
+                                Reservar recorrido
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Información Importante -->
+            <section id="informacion_recorridos" class="container" style="background: #fff; padding: 2rem; border-radius: 8px; border: 1px solid #e0e0e0; margin-bottom: 2.5rem;">
+                <h2>Información importante</h2>
+
+                <div class="informacion_contenedor" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+
+                    <article class="informacion_tarjeta">
+                        <h3>Horarios de salida</h3>
+                        <p>
+                            Los recorridos guiados salen los sábados y domingos
+                            a las 7:00 a. m.
+                        </p>
+                    </article>
+
+                    <article class="informacion_tarjeta">
+                        <h3>¿Qué incluye?</h3>
+                        <p>
+                            Todas las tarifas incluyen casco y candado
+                            para tu bicicleta.
+                        </p>
+                    </article>
+
+                    <article class="informacion_tarjeta">
+                        <h3>¿Qué debes llevar?</h3>
+                        <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                            <li>Ropa cómoda.</li>
+                            <li>Agua para hidratación.</li>
+                            <li>Protector solar.</li>
+                            <li>Documento de identidad.</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Llamado a la Acción final -->
+            <section id="reserva_recorrido" class="container" style="text-align: center; padding: 2rem; background: var(--crema); border-radius: 8px;">
+                <h2>¿Listo para pedalear?</h2>
+                <p style="margin-bottom: 1.5rem;">
+                    Elige tu recorrido y prepárate para descubrir Medellín
+                    sobre dos ruedas.
+                </p>
+
+                <a href="reserva.html" class="boton-principal">
+                    Solicitar una reserva
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Botón Flotante de WhatsApp Obligatorio -->
+        <a href="https://wa.me/573000000000" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto de WhatsApp">
+            WhatsApp
+        </a>
+
+        <footer class="site-footer">
+            <section class="footer-about">
+                <h2>Ubicación</h2>
+                <p>Rueda Libre, Medellín, Colombia. <a href="localizanos.html">Consulta cómo llegar</a> o escríbenos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.</p>
+            </section>
+            <nav class="social-nav" aria-label="Redes sociales">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+        <!-- Bootstrap 5.3 JavaScript Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaASS55SMO5NnyGzpNhgCecCxMW52nD2J" crossorigin="anonymous"></script>
+    </body>
+</html>

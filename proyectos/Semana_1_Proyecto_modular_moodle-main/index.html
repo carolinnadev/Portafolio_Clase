@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoAura | Soluciones Sustentables</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Hoja de estilos externa con Variables CSS y rem -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+        <!-- Encabezado y Navegación -->
+        <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold tracking-wide flex items-center gap-2">
+                    🌱 <span>EcoAura</span>
+                </a>
+                <nav aria-label="Navegación principal">
+                    <ul class="flex space-x-6 font-medium">
+                        <li><a href="index.html" class="text-amber-300 hover:text-white transition">Inicio</a></li>
+                        <li><a href="servicios.html" class="hover:text-amber-300 transition">Servicios</a></li>
+                        <li><a href="contacto.html" class="hover:text-amber-300 transition">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="flex-grow">
+            <!-- Hero Section con imagen de fondo y sombreado -->
+            <section class="carousel-bg-overlay text-white py-20 px-4 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Transformamos tus espacios en entornos sostenibles</h1>
+                    <p class="text-lg md:text-xl text-emerald-100 mb-8">Ofrecemos consultoría y productos ecológicos para el hogar y la empresa.</p>
+                    <a href="servicios.html" class="bg-amber-400 hover:bg-amber-500 text-emerald-950 font-bold py-3 px-6 rounded-lg transition shadow-lg inline-block">
+                        Ver Catálogo
+                    </a>
+                </div>
+            </section>
+
+            <!-- Carrusel 3D Giratorio (Proporción Optimizada) -->
+            <section class="py-16 bg-emerald-900 text-white overflow-hidden relative">
+
+            <!-- Encabezado de la Rueda Sostenible -->
+            <div class="container mx-auto px-4 text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-amber-300">Nuestra Rueda Sostenible</h2>
+                <p class="text-emerald-100 mt-3 text-lg md:text-xl">Explora nuestras 8 iniciativas clave para el hogar y la empresa</p>
+            </div>
+
+                <!-- Escena 3D -->
+                <div class="carousel-3d-viewport">
+                    <div class="carousel-3d-ring" id="carouselRing">
+                        
+                        <!-- Tarjeta 1 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5V_OFRyZ9hVxqVOXlZnt1Zq0BgO-OyiHj4gGndYRijgEbg5PbA6YqWfI&s=10" alt="Paneles Solares">
+                                <div class="card-body">
+                                    <span class="card-tag">ENERGÍA</span>
+                                    <h3>Parques Solares</h3>
+                                    <p class="card-date">📅 12 de Noviembre, 2026</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Guayabal, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 2 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://thumbs.dreamstime.com/b/captura-de-pantalla-del-centro-compost-urbano-tecnolog%C3%ADa-verde-reciclaje-la-producci%C3%B3n-residuos-cero-preservaci%C3%B3n-ecolog%C3%ADa-381192903.jpg" alt="Compostaje">
+                                <div class="card-body">
+                                    <span class="card-tag">COMPOSTAJE</span>
+                                    <h3>Cero Residuos Urbano</h3>
+                                    <p class="card-date">📅 18 de Noviembre, 2026</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Laureles, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 3 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://thursd.com/storage/media/77443/View-of-One-Central-Park-architectural-and-green-building.jpg" alt="Diseño Biofílico">
+                                <div class="card-body">
+                                    <span class="card-tag">BIOFILIA</span>
+                                    <h3>Jardines Verticales</h3>
+                                    <p class="card-date">📅 05 de Diciembre, 2026</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>El Poblado, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 4 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnz-FiiV1EGGwFZ-Y7MB0CnomU8T0nnIzNOPLUs2kjsi4PfvPYi_-FHW_g&s=10" alt="Auditoría Verde">
+                                <div class="card-body">
+                                    <span class="card-tag">EFICIENCIA</span>
+                                    <h3>Auditoría Verde</h3>
+                                    <p class="card-date">📅 12 de Diciembre, 2026</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Centro, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 5 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://static.wixstatic.com/media/8aaa8e_52a125d26e694935a0cffdf1cc47d71a~mv2.jpg/v1/fill/w_568,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8aaa8e_52a125d26e694935a0cffdf1cc47d71a~mv2.jpg" alt="Eólica">
+                                <div class="card-body">
+                                    <span class="card-tag">INNOVACIÓN</span>
+                                    <h3>Energía Eólica Micro</h3>
+                                    <p class="card-date">📅 20 de Diciembre, 2026</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Envigado, Antioquia</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 6 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://static.wixstatic.com/media/0936de_747dfdc543224c3c8887572d379d14c5~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0936de_747dfdc543224c3c8887572d379d14c5~mv2.jpg" alt="Reforestación">
+                                <div class="card-body">
+                                    <span class="card-tag">ECOLOGÍA</span>
+                                    <h3>Reforestación Urbana</h3>
+                                    <p class="card-date">📅 10 de Enero, 2027</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Aranjuez, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 7 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZyiVana7J9jJTQliUEdXddYhypBkfAzyZJr2up-OsddiKWOobbehcpY&s=10" alt="Agricultura Urbana">
+                                <div class="card-body">
+                                    <span class="card-tag">AGROECOLÓGICO</span>
+                                    <h3>Huertos Orgánicos</h3>
+                                    <p class="card-date">📅 15 de Enero, 2027</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Belén, Medellín</span>
+                                    </div>
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta 8 -->
+                        <div class="carousel-3d-card">
+                            <div class="card-inner">
+                                <img src="https://www.energiaadebate.com/file/1138/index.jpg" alt="Movilidad Eléctrica">
+                                <div class="card-body">
+                                    <span class="card-tag">MOVILIDAD</span>
+                                    <h3>Electromovilidad</h3>
+                                    <p class="card-date">📅 22 de Enero, 2027</p>
+                                    <!-- Ubicación -->
+                                    <div class="flex items-center gap-1.5 text-xs font-medium text-emerald-800 mb-4 bg-emerald-50 py-1.5 px-3 rounded-lg border border-emerald-100 mx-auto">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Sabaneta, Antioquia</span>
+                                    </div>                                    
+                                    <a href="servicios.html" class="btn-detail">Ver detalle</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Carrusel -->
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <button id="prevBtn" class="bg-emerald-700 hover:bg-emerald-600 text-amber-300 border border-emerald-600 p-3 rounded-full transition shadow-lg text-lg font-bold">
+                        &#10094;
+                    </button>
+                    <span class="text-xs tracking-wider text-emerald-200 uppercase select-none font-medium">
+                        👆 Arrastra con el mouse o usa las flechas
+                    </span>
+                    <button id="nextBtn" class="bg-emerald-700 hover:bg-emerald-600 text-amber-300 border border-emerald-600 p-3 rounded-full transition shadow-lg text-lg font-bold">
+                        &#10095;
+                    </button>
+                </div>
+            </section>
+
+            <!-- Presentación del Negocio / ¿Quiénes Somos? -->
+            <section class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="max-w-6xl mx-auto bg-gradient-to-br from-emerald-50 to-emerald-100/50 border border-emerald-100 rounded-3xl p-8 md:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        
+                        <!-- Columna de Texto -->
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-200/60 py-1.5 px-4 rounded-full">
+                                Sobre Nosotros
+                            </span>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-emerald-950 mt-4 mb-6">
+                                ¿Quiénes Somos?
+                            </h2>
+                            <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+                                En <strong>EcoAura</strong> nos dedicamos a integrar la sustentabilidad en tu día a día. Nuestro equipo de consultores y diseñadores trabaja para reducir la huella de carbono de hogares y pequeños negocios en Medellín mediante productos eco-amigables y asesoría energética personalizada.
+                            </p>
+                            <div class="flex items-center gap-6 border-t border-emerald-200/60 pt-6">
+                                <div>
+                                    <p class="text-2xl font-black text-emerald-800">+100</p>
+                                    <p class="text-xs text-gray-600 uppercase tracking-wider font-semibold">Hogares Sostenibles</p>
+                                </div>
+                                <div class="border-l border-emerald-200/60 pl-6">
+                                    <p class="text-2xl font-black text-emerald-800">100%</p>
+                                    <p class="text-xs text-gray-600 uppercase tracking-wider font-semibold">Energía Limpia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna de Imagen / Visual -->
+                        <div class="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg border-2 border-white group">
+                            <!-- Reemplaza el src con el enlace o ruta de tu imagen -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjU_xlhz3KNmVMfXlw6AUAViPUxytdaTue3VSobJboA&s=10" alt="Equipo EcoAura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 bg-emerald-900">
+                            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 via-transparent to-transparent flex items-end p-6">
+                                <p class="text-white text-sm font-medium">Comprometidos con el futuro verde del Valle de Aburrá 🌱</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Destacados / Nuestros Pilares Interactivos -->
+            <section class="bg-gray-100 py-16">
+                <div class="container mx-auto px-4">
+                    <header class="text-center mb-12">
+                        <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 py-1.5 px-4 rounded-full">
+                            Valores Corporativos
+                        </span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-emerald-900 mt-3">Nuestros Pilares</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto mt-2">
+                            Fundamentos que guían cada uno de nuestros proyectos de sostenibilidad.
+                        </p>
+                    </header>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- Pilar 1: Energía Limpia -->
+                        <article class="group bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-500 transition-all duration-300 flex flex-col">
+                            <div class="relative h-48 bg-emerald-900 overflow-hidden">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUoiQWlf6gJATwHJMt_OtrZ-r0ESHoZnRXSoUTYxDFnA&s=10" alt="Energía Limpia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                                <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-md text-2xl">
+                                    ☀️
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow text-center flex flex-col justify-center">
+                                <h3 class="text-2xl font-bold text-emerald-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                                    Energía Limpia
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">
+                                    Optimizamos tu consumo e instalamos paneles solares de alta eficiencia para garantizar un impacto ambiental mínimo.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Pilar 2: Cero Residuos -->
+                        <article class="group bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-500 transition-all duration-300 flex flex-col">
+                            <div class="relative h-48 bg-emerald-900 overflow-hidden">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQumv-_zMgnX59J3bwztPYHCrondax6r_hvwp7XcHqzTw&s=10" alt="Cero Residuos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                                <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-md text-2xl">
+                                    ♻️
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow text-center flex flex-col justify-center">
+                                <h3 class="text-2xl font-bold text-emerald-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                                    Cero Residuos
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">
+                                    Implementamos programas de compostaje y sistemas de reciclaje inteligente adaptados a cualquier tipo de espacio.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Pilar 3: Diseño Biofílico -->
+                        <article class="group bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden transform hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-500 transition-all duration-300 flex flex-col">
+                            <div class="relative h-48 bg-emerald-900 overflow-hidden">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTn5xWPwBNQkN4gtv0wXT13IV8y3hut8uuOeTrdzieGX9W6WmqRtAEv_A&s=10" alt="Diseño Biofílico" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                                <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-md text-2xl">
+                                    🌿
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow text-center flex flex-col justify-center">
+                                <h3 class="text-2xl font-bold text-emerald-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                                    Diseño Biofílico
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">
+                                    Integramos plantas y maximizamos la luz natural para mejorar drásticamente la salud, bienestar y productividad.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+            <div class="container mx-auto px-4">
+                <p>&copy; 2026 EcoAura. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Script del Carrusel 3D -->
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

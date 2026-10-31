@@ -1,0 +1,493 @@
+/* ==========================================================================
+   RESET Y ESTILOS BASE DE PÁGINA
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F3F4F6;
+  color: #111827;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #1565C0;
+}
+
+.header p {
+  color: #4B5563;
+  margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.category h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid #E5E7EB;
+  padding-bottom: 0.5rem;
+  color: #1F2937;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  position: relative;
+  min-height: 100px;
+}
+
+.card .num {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #9CA3AF;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.dark-bg {
+  background-color: #1E3A8A !important;
+}
+
+.neu-bg {
+  background-color: #E5E7EB !important;
+}
+
+.readme-box {
+  margin-top: 1.5rem;
+  background: #F8FAFC;
+  border-left: 4px solid #1565C0;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.readme-box h3 {
+  margin-bottom: 0.5rem;
+  color: #1565C0;
+}
+
+.readme-box ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   CLASE BASE DE BOTÓN (.btn)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: #FFFFFF;
+  background-color: #1565C0;
+  border: 2px solid #1565C0;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(17, 24, 39, 0.1);
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  line-height: 1.2;
+  position: relative;
+  outline: none;
+  user-select: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #67E8F9;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   CATEGORÍA 1: FUNDAMENTOS Y COLORES
+   ========================================================================== */
+.btn-primary { background-color: #1565C0; color: #FFFFFF; border-color: #1565C0; }
+.btn-secondary { background-color: #D1D5DB; color: #111827; border-color: #D1D5DB; }
+.btn-success { background-color: #16703C; color: #FFFFFF; border-color: #16703C; }
+.btn-danger { background-color: #B91C1C; color: #FFFFFF; border-color: #B91C1C; }
+.btn-warning { background-color: #FACC15; color: #111827; border-color: #FACC15; }
+.btn-info { background-color: #67E8F9; color: #111827; border-color: #67E8F9; }
+.btn-dark { background-color: #1F2937; color: #FFFFFF; border-color: #1F2937; }
+.btn-light { background-color: #F9FAFB; color: #111827; border-color: #6B7280; }
+.btn-text { background-color: transparent; color: #1565C0; border-color: transparent; box-shadow: none; }
+.btn-custom { background-color: #6D28D9; color: #FFFFFF; border-color: #6D28D9; }
+
+/* ==========================================================================
+   CATEGORÍA 2: BORDES, TAMAÑOS Y FORMAS
+   ========================================================================== */
+.btn-outline { background-color: transparent; color: #1565C0; border-color: #1565C0; }
+.btn-border-thick { border-width: 4px; }
+.btn-border-dashed { border-style: dashed; border-width: 2px; }
+.btn-border-dotted { border-style: dotted; border-width: 3px; }
+.btn-rounded { border-radius: 12px; }
+.btn-pill { border-radius: 9999px; }
+.btn-circle { width: 42px; height: 42px; padding: 0; border-radius: 50%; font-size: 1.2rem; }
+.btn-small { padding: 0.35rem 0.75rem; font-size: 0.8rem; }
+.btn-large { padding: 0.9rem 1.8rem; font-size: 1.15rem; }
+.btn-full { width: 100%; }
+
+/* ==========================================================================
+   CATEGORÍA 3: TIPOGRAFÍA Y SOMBRAS
+   ========================================================================== */
+.btn-uppercase { text-transform: uppercase; }
+.btn-spaced { letter-spacing: 2px; }
+.btn-bold { font-weight: 800; }
+.btn-elegant { font-family: 'Playfair Display', serif; font-style: italic; background-color: #111827; border-color: #111827; }
+.btn-underline { text-decoration: underline; text-underline-offset: 4px; }
+.btn-shadow-soft { box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+.btn-shadow-strong { box-shadow: 0 10px 20px rgba(17, 24, 39, 0.35); }
+.btn-shadow-color { background-color: #1565C0; color: #FFFFFF; box-shadow: 0 8px 18px rgba(21, 101, 192, 0.45); }
+.btn-relief { box-shadow: inset 0 2px 2px rgba(255,255,255,0.4), 0 4px 6px rgba(0,0,0,0.3); }
+.btn-text-glow { background-color: #111827; color: #FFFFFF; border-color: #111827; text-shadow: 0 0 8px #67E8F9; }
+
+/* ==========================================================================
+   CATEGORÍA 4: DEGRADADOS
+   ========================================================================== */
+.btn-gradient-horizontal { background: linear-gradient(to right, #1E3A8A, #6D28D9); border: none; }
+.btn-gradient-vertical { background: linear-gradient(to bottom, #064E3B, #0F766E); border: none; }
+.btn-gradient-diagonal { background: linear-gradient(135deg, #7F1D1D, #9A3412); border: none; }
+.btn-gradient-three { background: linear-gradient(to right, #1E3A8A, #6D28D9, #9D174D); border: none; }
+.btn-gradient-radial { background: radial-gradient(circle, #115E59 0%, #134E4A 100%); border: none; }
+.btn-gradient-sunset { background: linear-gradient(to right, #7F1D1D, #9A3412, #B45309); border: none; }
+.btn-gradient-ocean { background: linear-gradient(to right, #075985, #065F46); border: none; }
+.btn-gradient-pastel { background: linear-gradient(to right, #FBCFE8, #DDD6FE); color: #111827; border: none; }
+.btn-gradient-border {
+  background: #FFFFFF;
+  color: #111827;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(to right, #1565C0, #6D28D9);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.btn-gradient-hover {
+  background: linear-gradient(to right, #1E3A8A, #6D28D9);
+  background-size: 200% auto;
+  border: none;
+}
+.btn-gradient-hover:hover, .btn-gradient-hover:focus-visible {
+  background-position: right center;
+}
+
+/* ==========================================================================
+   CATEGORÍA 5: ESTADOS E INTERACCIÓN
+   ========================================================================== */
+.btn-hover-background { background-color: #1565C0; }
+.btn-hover-background:hover, .btn-hover-background:focus-visible { background-color: #0D47A1; border-color: #0D47A1; color: #FFFFFF; }
+
+.btn-hover-text { background-color: #FFFFFF; color: #1565C0; border-color: #1565C0; }
+.btn-hover-text:hover, .btn-hover-text:focus-visible { color: #6D28D9; }
+
+.btn-hover-border { background-color: #FFFFFF; color: #111827; border-color: #1565C0; }
+.btn-hover-border:hover, .btn-hover-border:focus-visible { border-color: #6D28D9; }
+
+.btn-hover-shadow:hover, .btn-hover-shadow:focus-visible { box-shadow: 0 8px 16px #0D47A1; }
+
+.btn-hover-underline { background-color: #FFFFFF; color: #1565C0; border-color: #1565C0; }
+.btn-hover-underline:hover, .btn-hover-underline:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+
+.btn-active:active { background-color: #0D47A1 !important; border-color: #0D47A1 !important; }
+
+.btn-focus:focus-visible { outline: 4px solid #FACC15; outline-offset: 3px; }
+
+.btn-disabled, .btn-disabled:disabled {
+  background-color: #E5E7EB;
+  color: #4B5563;
+  border-color: #E5E7EB;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-transition-slow { transition: background-color 1s ease, transform 1s ease; }
+.btn-transition-slow:hover { background-color: #0D47A1; transform: scale(1.05); }
+
+.btn-transition-stagger { transition: background-color 0.2s ease, transform 0.5s 0.2s ease; }
+.btn-transition-stagger:hover { background-color: #6D28D9; transform: translateY(-4px); }
+
+/* ==========================================================================
+   CATEGORÍA 6: TRANSFORMACIONES
+   ========================================================================== */
+.btn-grow:hover, .btn-grow:focus-visible { transform: scale(1.08); }
+.btn-shrink:hover, .btn-shrink:focus-visible { transform: scale(0.92); }
+.btn-lift:hover, .btn-lift:focus-visible { transform: translateY(-5px); }
+.btn-move-right:hover, .btn-move-right:focus-visible { transform: translateX(8px); }
+.btn-rotate:hover, .btn-rotate:focus-visible { transform: rotate(5deg); }
+.btn-skew:hover, .btn-skew:focus-visible { transform: skewX(-10deg); }
+.btn-press:active { transform: translateY(4px); }
+.btn-perspective { perspective: 500px; }
+.btn-perspective:hover { transform: rotateY(20deg); }
+.btn-icon-move .icon { transition: transform 0.3s ease; display: inline-block; margin-left: 5px; }
+.btn-icon-move:hover .icon { transform: translateX(6px); }
+.btn-transform-combined:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+
+/* ==========================================================================
+   CATEGORÍA 7: ICONOS E IMÁGENES
+   ========================================================================== */
+.btn-icon-left .icon { margin-right: 8px; }
+.btn-icon-right .icon { margin-left: 8px; }
+.btn-icon-only { width: 40px; height: 40px; padding: 0; border-radius: 8px; }
+.btn-download .icon { margin-right: 6px; }
+
+.btn-image-background {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/200/100') center/cover;
+  border: none;
+}
+
+.btn-image-overlay {
+  background: url('https://picsum.photos/200/101') center/cover;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+.btn-image-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.btn-image-overlay span, .btn-image-overlay { position: relative; z-index: 1; }
+
+.btn-avatar { padding: 0.3rem 0.8rem 0.3rem 0.4rem; border-radius: 30px; gap: 8px; }
+.btn-avatar img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+
+.btn-icon-separated { padding: 0; overflow: hidden; display: inline-flex; border: none; }
+.btn-icon-separated .icon-box { background: rgba(0,0,0,0.2); padding: 0.6rem 0.8rem; }
+.btn-icon-separated .text-box { padding: 0.6rem 1rem; }
+
+.btn-image-hover {
+  background: url('https://picsum.photos/200/102') center/100% auto;
+  transition: background-size 0.4s ease;
+  border: none;
+}
+.btn-image-hover:hover { background-size: 120% auto; }
+
+.btn-icon-reveal { overflow: hidden; }
+.btn-icon-reveal .icon-hidden { opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; display: inline-block; margin-left: 4px; }
+.btn-icon-reveal:hover .icon-hidden { opacity: 1; transform: translateX(0); }
+
+/* ==========================================================================
+   CATEGORÍA 8: EFECTOS CON PSEUDOELEMENTOS
+   ========================================================================== */
+.btn-fill-left, .btn-fill-bottom, .btn-fill-center, .btn-shine, .btn-double-layer, .btn-circle-expand, .btn-diagonal-sweep {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-fill-left::before {
+  content: ''; position: absolute; inset: 0; background: #0D47A1;
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; z-index: -1;
+}
+.btn-fill-left:hover::before { transform: scaleX(1); }
+
+.btn-fill-bottom::before {
+  content: ''; position: absolute; inset: 0; background: #0D47A1;
+  transform: scaleY(0); transform-origin: bottom; transition: transform 0.3s ease; z-index: -1;
+}
+.btn-fill-bottom:hover::before { transform: scaleY(1); }
+
+.btn-fill-center::before {
+  content: ''; position: absolute; inset: 0; background: #0D47A1;
+  transform: scaleX(0); transform-origin: center; transition: transform 0.3s ease; z-index: -1;
+}
+.btn-fill-center:hover::before { transform: scaleX(1); }
+
+.btn-shine::before {
+  content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-25deg); transition: left 0.6s ease;
+}
+.btn-shine:hover::before { left: 125%; }
+
+.btn-underline-expand { background: #FFFFFF; color: #1565C0; border-color: transparent; }
+.btn-underline-expand::after {
+  content: ''; position: absolute; bottom: 4px; left: 50%; width: 0; height: 2px;
+  background: #1565C0; transition: all 0.3s ease; transform: translateX(-50%);
+}
+.btn-underline-expand:hover::after { width: 80%; }
+
+.btn-corners { position: relative; }
+.btn-corners::before, .btn-corners::after {
+  content: ''; position: absolute; width: 6px; height: 6px; border: 2px solid #FFFFFF; transition: all 0.3s ease; opacity: 0;
+}
+.btn-corners::before { top: 2px; left: 2px; border-right: none; border-bottom: none; }
+.btn-corners::after { bottom: 2px; right: 2px; border-left: none; border-top: none; }
+.btn-corners:hover::before, .btn-corners:hover::after { opacity: 1; transform: scale(1.2); }
+
+.btn-double-layer::before, .btn-double-layer::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; transition: transform 0.3s ease;
+}
+.btn-double-layer::before { background: #0D47A1; transform: translateY(-100%); }
+.btn-double-layer::after { background: #4C1D95; transform: translateY(100%); }
+.btn-double-layer:hover::before { transform: translateY(0); }
+.btn-double-layer:hover::after { transform: translateY(0); }
+
+.btn-circle-expand::before {
+  content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+  background: #0D47A1; border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.4s ease, height 0.4s ease; z-index: -1;
+}
+.btn-circle-expand:hover::before { width: 220px; height: 220px; }
+
+.btn-border-reveal { background: #1565C0; position: relative; }
+.btn-border-reveal::before {
+  content: ''; position: absolute; inset: -4px; border: 2px solid #67E8F9;
+  border-radius: 8px; opacity: 0; transition: opacity 0.3s ease;
+}
+.btn-border-reveal:hover::before { opacity: 1; }
+
+.btn-diagonal-sweep::before {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: #0D47A1; transform: skewX(-30deg); transition: left 0.4s ease; z-index: -1;
+}
+.btn-diagonal-sweep:hover::before { left: 0; }
+
+/* ==========================================================================
+   CATEGORÍA 9: ANIMACIONES CSS
+   ========================================================================== */
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+.btn-pulse { animation: pulse 1.8s infinite ease-in-out; }
+
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.08); } 28% { transform: scale(1); } 42% { transform: scale(1.08); } 70% { transform: scale(1); } }
+.btn-heartbeat { animation: heartbeat 2s infinite; }
+
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.btn-float { animation: float 2.5s infinite ease-in-out; }
+
+@keyframes shake { 0%, 100% { transform: translateX(0); } 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+.btn-shake:hover { animation: shake 0.5s ease-in-out; }
+
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.btn-bounce:hover { animation: bounce 0.4s ease; }
+
+@keyframes glowPulse { 0%, 100% { box-shadow: 0 0 5px #22D3EE; } 50% { box-shadow: 0 0 18px #22D3EE; } }
+.btn-glow-pulse { background: #111827; border-color: #111827; animation: glowPulse 2s infinite; }
+
+@keyframes gradientMotion { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.btn-gradient-motion {
+  background: linear-gradient(270deg, #1E3A8A, #6D28D9); background-size: 400% 400%;
+  border: none; animation: gradientMotion 4s ease infinite;
+}
+
+.btn-icon-spin:hover .spinner-icon { display: inline-block; animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.btn-loading { cursor: wait; }
+.btn-loading .loader {
+  width: 14px; height: 14px; border: 2px solid #FFFFFF; border-bottom-color: transparent;
+  border-radius: 50%; display: inline-block; margin-right: 8px; animation: spin 0.8s linear infinite;
+}
+
+@keyframes sequence {
+  0% { transform: translateY(0) scale(1); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  33% { transform: translateY(-5px) scale(1); }
+  66% { transform: translateY(-5px) scale(1.06); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+  100% { transform: translateY(0) scale(1); }
+}
+.btn-sequence:hover { animation: sequence 0.8s ease forwards; }
+
+/* ==========================================================================
+   CATEGORÍA 10: BOTONES DE DISEÑO AVANZADO
+   ========================================================================== */
+.btn-neon {
+  background: #111827; color: #FFFFFF; border: 2px solid #22D3EE;
+  box-shadow: 0 0 8px #22D3EE; text-shadow: 0 0 5px #22D3EE;
+}
+.btn-neon:hover { box-shadow: 0 0 18px #22D3EE, inset 0 0 8px #22D3EE; }
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4); color: #FFFFFF;
+}
+
+.btn-neumorphic {
+  background: #E5E7EB; color: #111827; border: none;
+  box-shadow: 5px 5px 10px #b8babe, -5px -5px 10px #ffffff;
+}
+.btn-neumorphic:active {
+  box-shadow: inset 5px 5px 10px #b8babe, inset -5px -5px 10px #ffffff;
+}
+
+.btn-retro-3d {
+  background: #FACC15; color: #111827; border: 2px solid #111827;
+  box-shadow: 4px 4px 0px #111827; font-weight: bold;
+}
+.btn-retro-3d:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #111827; }
+
+.btn-metallic {
+  background: linear-gradient(145deg, #E5E7EB, #9CA3AF, #F9FAFB);
+  color: #111827; border: 1px solid #111827; position: relative; overflow: hidden;
+}
+.btn-metallic::after {
+  content: ''; position: absolute; top: -50%; left: -60%; width: 20%; height: 200%;
+  background: rgba(255, 255, 255, 0.7); transform: rotate(30deg); transition: left 0.5s ease;
+}
+.btn-metallic:hover::after { left: 140%; }
+
+.btn-rainbow-border {
+  position: relative; background: #111827; color: #FFFFFF; border: none; border-radius: 8px; z-index: 1;
+}
+.btn-rainbow-border::before {
+  content: ''; position: absolute; inset: -3px; border-radius: 10px;
+  background: linear-gradient(45deg, #1565C0, #6D28D9, #B91C1C, #1565C0);
+  background-size: 300% 300%; z-index: -1; animation: gradientMotion 3s linear infinite;
+}
+
+.btn-double-text { position: relative; overflow: hidden; }
+.btn-double-text .txt-main, .btn-double-text .txt-hover { transition: transform 0.3s ease; display: block; }
+.btn-double-text .txt-hover { position: absolute; top: 100%; left: 0; right: 0; text-align: center; }
+.btn-double-text:hover .txt-main { transform: translateY(-150%); }
+.btn-double-text:hover .txt-hover { transform: translateY(-130%); }
+
+.btn-cinematic {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/200/103') center/cover;
+  border: 1px solid rgba(255,255,255,0.2); letter-spacing: 1px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-cinematic:hover { transform: scale(1.04); box-shadow: 0 0 20px rgba(0,0,0,0.8); }
+
+.btn-premium {
+  background: linear-gradient(135deg, #1E3A8A, #6D28D9); border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 15px rgba(17, 24, 39, 0.3);
+}
+.btn-premium:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(109, 40, 217, 0.4); }

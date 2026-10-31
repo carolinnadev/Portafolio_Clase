@@ -1,0 +1,213 @@
+:root {
+  /* Paleta de colores */
+  --color-primary: #047857;       /* Emerald 700 */
+  --color-primary-dark: #065f46;  /* Emerald 800 */
+  --color-secondary: #f59e0b;     /* Amber 500 */
+  --color-bg-main: #f9fafb;       /* Gray 50 */
+  --color-bg-card: #ffffff;       /* White */
+  --color-text-main: #1f2937;     /* Gray 800 */
+  --color-text-muted: #4b5563;    /* Gray 600 */
+  --color-border: #e5e7eb;        /* Gray 200 */
+
+  /* Espaciados consistentes en REM */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+
+  /* Bordes y Sombras */
+  --border-radius: 0.75rem; /* 12px */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.custom-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   CLASE: FONDO CON IMAGEN Y CAPA DE SOMBREADO
+   ========================================== */
+.carousel-bg-overlay {
+  background-image: 
+    linear-gradient(rgba(6, 78, 59, 0.3), rgba(4, 47, 35, 0.5)), 
+    url('https://media.istockphoto.com/id/1903972230/es/foto/vista-superior-del-bosque-verde-con-globo-terr%C3%A1queo-concepto-de-medio-ambiente-sostenible.jpg?s=612x612&w=0&k=20&c=-YaMySrMr_qDK4zjvp8wXeb41Uk8xYBqHfpUK_wukjQ=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-btn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-main);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--border-radius) / 1.5);
+  background-color: #ffffff;
+}
+
+.form-input:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: transparent;
+}
+
+/* ==========================================
+   ESTILOS PARA CARRUSEL 3D GIRATORIO (SIN CORTES)
+   ========================================== */
+.carousel-3d-viewport {
+  width: 100%;
+  height: 480px; /* Suficiente espacio para no cortar la tarjeta ni su sombra */
+  perspective: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: grab;
+  overflow: visible; /* IMPORTANTE: evita que se corten los bordes superior e inferior */
+}
+
+.carousel-3d-viewport:active {
+  cursor: grabbing;
+}
+
+.carousel-3d-ring {
+  width: 270px;
+  height: 340px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-3d-card {
+  position: absolute;
+  width: 270px;
+  height: 340px;
+  left: 0;
+  top: 0;
+  backface-visibility: visible;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  background: #064e3b; /* Verde esmeralda oscuro EcoAura */
+  border: 2px solid #047857;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-3d-card:hover .card-inner {
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  transform: scale(1.02);
+}
+
+.card-inner img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-tag {
+  color: #f59e0b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0.15rem 0;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #a7f3d0;
+  margin-bottom: 0.25rem;
+}
+
+.btn-detail {
+  background-color: #047857;
+  color: #ffffff;
+  padding: 0.45rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-detail:hover {
+  background-color: #f59e0b;
+  color: #064e3b;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rueda Libre | Inicio</title>
+        
+        <!-- 1. Bootstrap 5.3 CSS por CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        
+        <!-- Hoja de estilos propia -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm w-100">
+                <div class="container">
+                    <a class="navbar-brand fw-bold font-monospace text-warning" href="index.html">
+                        <i class="bi bi-bicycle me-2"></i>Rueda Libre
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="paginas/horario.html">Horario</a></li>
+                            <li class="nav-item"><a class="nav-link" href="paginas/recorridos.html">Recorridos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="paginas/tarifas.html">Tarifas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="paginas/reserva.html">Reservas</a></li>
+                            <li class="nav-item">
+                                <select name="menu" id="menu-select" class="form-select form-select-sm bg-success text-white border-0" aria-label="Menú de páginas" onchange="if (this.value) window.location.href = this.value">
+                                    <option value="" selected class="bg-white text-dark">Menú</option>
+                                    <option value="paginas/catalogo.html" class="bg-white text-dark">Bicicletas</option>
+                                    <option value="paginas/reparar.html" class="bg-white text-dark">Reparar</option>
+                                    <option value="paginas/nosotros.html" class="bg-white text-dark">Nosotros</option>
+                                    <option value="paginas/localizanos.html" class="bg-white text-dark">Localízanos</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Banner Principal con imagen de fondo y tarjetas superpuestas -->
+            <section class="banner-hero" aria-labelledby="inicio-titulo">
+                <div class="banner-hero__overlay">
+                    <div class="banner-hero__content">
+                        <p class="eyebrow">Rueda Libre · Medellín</p>
+                        <h1 id="inicio-titulo">Rueda Libre | Alquiler de bicicletas en Medellín</h1>
+                        <p>Descubre la ciudad a tu ritmo, con bicicletas listas para acompañarte por sus ciclorrutas y montañas. <a href="#encuentranos">Encuéntranos en Medellín</a>.</p>
+                        <a class="boton-principal" href="#servicios">Conoce nuestros servicios</a>
+                    </div>
+
+                    <!-- Tarjetas pequeñas flotantes en la parte inferior del fondo -->
+                    <div class="hero-cards-overlay">
+                        <ul class="cards-grid">
+                            <li class="service-card">
+                                <figure class="card-image-container">
+                                    <img src="img/bicicleta-urbana.jpg" alt="Bicicleta urbana" class="card-image">
+                                </figure>
+                                <a href="paginas/reserva.html" class="card-btn">Reservar</a>
+                            </li>
+                            <li class="service-card">
+                                <figure class="card-image-container">
+                                    <img src="img/bicicleta.jpg" alt="Mantenimiento" class="card-image">
+                                </figure>
+                                <a href="paginas/reparar.html" class="card-btn">Reparar</a>
+                            </li>
+                            <li class="service-card">
+                                <figure class="card-image-container">
+                                    <img src="img/ruta-parques.jpg" alt="Recorridos" class="card-image">
+                                </figure>
+                                <a href="paginas/recorridos.html" class="card-btn">Recorrido</a>
+                            </li>
+                            <li class="service-card">
+                                <figure class="card-image-container">
+                                    <img src="img/ruta-montana.jpg" alt="Ubicación" class="card-image">
+                                </figure>
+                                <a href="paginas/localizanos.html" class="card-btn">Localízanos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Carrusel de Promociones del Mes (Nativo de Bootstrap 5.3) -->
+            <section class="container my-5" aria-labelledby="promociones-titulo">
+                <h2 id="promociones-titulo" class="text-center mb-4 fw-bold">Promociones del Mes</h2>
+                
+                <div id="promoCarousel" class="carousel slide carousel-fade shadow rounded overflow-hidden" data-bs-ride="carousel" data-bs-interval="4000">
+                    <!-- Indicadores de puntos -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- Contenedor de diapositivas -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/bicicleta-urbana.jpg" class="d-block w-100" alt="Martes 2x1 en bicicletas urbanas" style="height: 380px; object-fit: cover;">
+                            <div class="carousel-caption bg-dark bg-opacity-75 rounded p-3 mb-2">
+                                <h5 class="text-warning fw-bold">Martes 2x1 en Urbanas</h5>
+                                <p class="mb-0 text-white">Disfruta de un 2x1 en toda nuestra flota de bicicletas urbanas todos los martes.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ruta-parques.jpg" class="d-block w-100" alt="Descuento en eléctricas de lunes a jueves" style="height: 380px; object-fit: cover;">
+                            <div class="carousel-caption bg-dark bg-opacity-75 rounded p-3 mb-2">
+                                <h5 class="text-warning fw-bold">20% de Descuento en Eléctricas</h5>
+                                <p class="mb-0 text-white">Aprovecha la asistencia eléctrica con tarifa especial de lunes a jueves.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/ruta-montana.jpg" class="d-block w-100" alt="Recorrido guiado gratis por cumpleaños" style="height: 380px; object-fit: cover;">
+                            <div class="carousel-caption bg-dark bg-opacity-75 rounded p-3 mb-2">
+                                <h5 class="text-warning fw-bold">¡Recorrido Gratis en tu Cumpleaños!</h5>
+                                <p class="mb-0 text-white">Si estás cumpliendo años este mes, tu recorrido guiado corre por cuenta de Rueda Libre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles de navegación manual -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Carrusel Infinito de Bicicletas -->
+            <section class="bike-carousel-section" aria-labelledby="bicicletas-inicio-titulo">
+                <h2 id="bicicletas-inicio-titulo">Bicicletas disponibles por hora</h2>
+                <div class="bike-carousel" aria-label="Carrusel de bicicletas disponibles">
+                    <div class="bike-carousel__track">
+                        <div class="bike-carousel__group">
+                            <article class="bike-card">
+                                <img src="img/bicicleta-urbana.jpg" alt="Bicicleta urbana clásica">
+                                <div class="bike-card__details"><span>Urbana</span><h3>Urbana Clásica</h3><small class="bike-card__reference">Ref: URB-001</small><p><strong>$10.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-gravel.jpg" alt="Bicicleta urbana plegable">
+                                <div class="bike-card__details"><span>Urbana</span><h3>Urbana Plegable</h3><small class="bike-card__reference">Ref: URB-002</small><p><strong>$12.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-montana.jpg" alt="Bicicleta de montaña">
+                                <div class="bike-card__details"><span>Montaña</span><h3>Montaña Trail</h3><small class="bike-card__reference">Ref: MON-001</small><p><strong>$15.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-gravel.jpg" alt="Bicicleta gravel">
+                                <div class="bike-card__details"><span>Gravel</span><h3>Gravel Aventura</h3><small class="bike-card__reference">Ref: GRA-001</small><p><strong>$18.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-electrica.jpg" alt="Bicicleta eléctrica">
+                                <div class="bike-card__details"><span>Eléctrica</span><h3>Eléctrica Urbana</h3><small class="bike-card__reference">Ref: ELE-001</small><p><strong>$25.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-urbana.jpg" alt="Bicicleta infantil">
+                                <div class="bike-card__details"><span>Infantil</span><h3>Infantil</h3><small class="bike-card__reference">Ref: INF-001</small><p><strong>$8.000 COP</strong> / hora</p></div>
+                            </article>
+                        </div>
+                        <!-- Duplicado del grupo para efecto infinito sin cortes -->
+                        <div class="bike-carousel__group" aria-hidden="true">
+                            <article class="bike-card">
+                                <img src="img/bicicleta-urbana.jpg" alt="">
+                                <div class="bike-card__details"><span>Urbana</span><h3>Urbana Clásica</h3><small class="bike-card__reference">Ref: URB-001</small><p><strong>$10.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-gravel.jpg" alt="">
+                                <div class="bike-card__details"><span>Urbana</span><h3>Urbana Plegable</h3><small class="bike-card__reference">Ref: URB-002</small><p><strong>$12.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-montana.jpg" alt="">
+                                <div class="bike-card__details"><span>Montaña</span><h3>Montaña Trail</h3><small class="bike-card__reference">Ref: MON-001</small><p><strong>$15.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-gravel.jpg" alt="">
+                                <div class="bike-card__details"><span>Gravel</span><h3>Gravel Aventura</h3><small class="bike-card__reference">Ref: GRA-001</small><p><strong>$18.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-electrica.jpg" alt="">
+                                <div class="bike-card__details"><span>Eléctrica</span><h3>Eléctrica Urbana</h3><small class="bike-card__reference">Ref: ELE-001</small><p><strong>$25.000 COP</strong> / hora</p></div>
+                            </article>
+                            <article class="bike-card">
+                                <img src="img/bicicleta-urbana.jpg" alt="">
+                                <div class="bike-card__details"><span>Infantil</span><h3>Infantil</h3><small class="bike-card__reference">Ref: INF-001</small><p><strong>$8.000 COP</strong> / hora</p></div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contenido-seccion" id="quienes-somos">
+                <h2>¿Quiénes somos?</h2>
+                <p>Rueda Libre ofrece alquiler de bicicletas en Medellín para que residentes y visitantes recorran la ciudad, sus ciclorrutas y sus paisajes a su propio ritmo.</p>
+            </section>
+
+            <section class="contenido-seccion" id="servicios">
+                <h2>Nuestros servicios</h2>
+                <div class="servicios-grid">
+                    <article class="servicio-item">
+                        <img src="img/bicicleta-urbana.jpg" alt="Bicicleta disponible para alquiler en Medellín">
+                        <div><h3>Alquiler de bicicletas</h3><p>Elige una bicicleta urbana, de montaña o eléctrica. Las tarifas de alquiler incluyen casco y candado.</p><a href="paginas/tarifas.html">Consultar tarifas de alquiler</a></div>
+                    </article>
+                    <article class="servicio-item">
+                        <img src="img/ruta-parques.jpg" alt="Paisaje de una ruta para recorrer en bicicleta">
+                        <div><h3>Recorridos guiados</h3><p>Explora Medellín con rutas de distintas distancias y niveles, acompañado por un recorrido guiado.</p><a href="paginas/tarifas.html#recorridos">Ver recorridos y precios</a></div>
+                    </article>
+                    <article class="servicio-item">
+                        <img src="img/bicicleta.jpg" alt="Bicicleta de montaña para revisión de mantenimiento">
+                        <div><h3>Taller básico de mantenimiento</h3><p>Consulta por revisión general, ajuste de frenos, llantas y cambios para mantener tu bicicleta lista para rodar.</p><a href="paginas/reparar.html">Conocer el taller</a></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contenido-seccion como-alquilar">
+                <h2>¿Cómo alquilar?</h2>
+                <ol>
+                    <li>Elige el tipo de bicicleta y el plan que prefieras.</li>
+                    <li>Revisa las tarifas y las condiciones del alquiler.</li>
+                    <li>Completa el formulario con tus datos y la referencia del modelo.</li>
+                    <li>Espera la confirmación del equipo de Rueda Libre.</li>
+                </ol>
+            </section>
+
+            <section class="contenido-seccion beneficios">
+                <h2>Beneficios</h2>
+                <ul>
+                    <li>Casco y candado incluidos en el alquiler.</li>
+                    <li>Opciones urbanas, de montaña, eléctricas y para diferentes edades.</li>
+                    <li>Recorridos guiados con información de distancia, duración y dificultad.</li>
+                </ul>
+            </section>
+
+            <section class="contenido-seccion flota" id="flota">
+                <h2>Nuestra flota</h2>
+                <div class="flota-grid">
+                    <article class="modelo-card"><img src="img/bicicleta-urbana.jpg" alt="Bicicleta Urbana Clásica"><div class="modelo-card__contenido"><h3>Urbana Clásica</h3><p>Cómoda y liviana para las ciclorrutas.</p><p class="modelo-precio">$10.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta-gravel.jpg" alt="Bicicleta Urbana Plegable"><div class="modelo-card__contenido"><h3>Urbana Plegable</h3><p>Se dobla en segundos; ideal para combinar con el metro.</p><p class="modelo-precio">$12.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta-montana.jpg" alt="Bicicleta Montaña Trail"><div class="modelo-card__contenido"><h3>Montaña Trail</h3><p>Suspensión delantera y 21 cambios para las subidas.</p><p class="modelo-precio">$15.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta-gravel.jpg" alt="Bicicleta Gravel Aventura"><div class="modelo-card__contenido"><h3>Gravel Aventura</h3><p>Para rutas mixtas de asfalto y destapado.</p><p class="modelo-precio">$18.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta-electrica.jpg" alt="Bicicleta Eléctrica Urbana"><div class="modelo-card__contenido"><h3>Eléctrica Urbana</h3><p>Asistencia eléctrica con 45 km de autonomía.</p><p class="modelo-precio">$25.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta-urbana.jpg" alt="Bicicleta Infantil"><div class="modelo-card__contenido"><h3>Infantil</h3><p>Para niños de 6 a 10 años.</p><p class="modelo-precio">$8.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                    <article class="modelo-card"><img src="img/bicicleta.jpg" alt="Bicicleta Tándem para dos personas"><div class="modelo-card__contenido"><h3>Tándem</h3><p>Para dos personas; perfecta para pasear en pareja.</p><p class="modelo-precio">$20.000 <span>/ hora</span></p><a class="boton-enlace" href="paginas/reserva.html">Reservar</a></div></article>
+                </div>
+            </section>
+
+            <section class="contenido-seccion" id="rutas">
+                <h2>Nuestras rutas</h2>
+                <div class="rutas-grid">
+                    <article class="ruta-card"><img src="img/ruta-parques.jpg" alt="Paisaje verde de la ruta Río y Parques"><div><h3>Río y Parques</h3><p>12 km · 2 h · Fácil</p><p>$45.000 por persona</p><a href="paginas/tarifas.html#recorridos">Ver detalles</a></div></article>
+                    <article class="ruta-card"><img src="img/ruta-parques.jpg" alt="Paisaje urbano y verde de Sabores de Barrio"><div><h3>Sabores de Barrio</h3><p>18 km · 3 h · Medio</p><p>$60.000 por persona</p><a href="paginas/tarifas.html#recorridos">Ver detalles</a></div></article>
+                    <article class="ruta-card"><img src="img/ruta-montana.jpg" alt="Paisaje de montaña de la ruta Reto Las Palmas"><div><h3>Reto Las Palmas</h3><p>25 km · 4 h · Difícil</p><p>$85.000 por persona</p><a href="paginas/tarifas.html#recorridos">Ver detalles</a></div></article>
+                </div>
+            </section>
+
+            <section class="contenido-seccion encuentra" id="encuentranos">
+                <h2>Encuéntranos</h2>
+                <p>Rueda Libre está en Medellín, Colombia. Escríbenos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.</p>
+                <a class="boton-enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Medell%C3%ADn%2C%20Colombia" target="_blank" rel="noopener noreferrer">Ver Medellín en Google Maps</a>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <nav class="social-nav">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="footer-about">
+                <h2>Ubicación</h2>
+                <p>Rueda Libre, Medellín, Colombia. <a href="paginas/localizanos.html">Consulta cómo llegar</a> o escríbenos a <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>.</p>
+            </section>
+        </footer>
+
+        <!-- Bootstrap 5.3 JavaScript Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

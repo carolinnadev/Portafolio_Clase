@@ -1,0 +1,89 @@
+===============================================================================
+BITÁCORA DE DESARROLLO Y AUDITORÍA - PROYECTO RUEDA LIBRE (V1.0 / V1.5)
+===============================================================================
+
+PROYECTO: Rueda Libre - Sistema Web de Alquiler de Bicicletas y Recorridos Guiados
+CIUDAD: Medellín, Colombia
+ESTÁNDAR DE ENFOQUE: HTML5 Semántico, CSS3 Flexbox/Grid, Accesibilidad WCAG 2.1 y Responsive Design.
+
+-------------------------------------------------------------------------------
+1. REGISTRO DE REVISIÓN Y CORRECCIONES POR ARCHIVO
+-------------------------------------------------------------------------------
+
+[RAÍZ / INDEX.HTML]
+- Corrección de semántica HTML: inclusión de h1 único en el banner hero.
+- Corrección de rutas relativas de hojas de estilo (css/styles.css) e imágenes.
+- Implementación de tarjetas de servicios sobrepuestas mediante CSS Grid.
+- Inclusión del botón flotante de WhatsApp obligatorio.
+
+[PÁGINAS INTERNAS / PAGINAS/]
+- horario.html: 
+  * Estandarización de tablas semánticas con captions, thead, tbody, th scope="col" y scope="row".
+  * Inclusión de lista de definición (dl, dt, dd) para los tipos de servicio.
+- catalogo.html: 
+  * Implementación del carrusel continuo en CSS con @keyframes.
+  * Corrección de tarjetas de bicicletas con referencias oficiales (URB-001, MON-001, ELE-001, etc.).
+- localizanos.html:
+  * Integración de mapa interactivo/responsive de Google Maps en Medellín.
+  * Estructuración de datos de ubicación, transporte público y canales de atención.
+- tarifas.html:
+  * Creación de tablas comparativas de precios de alquiler (1h, 4h, Día Completo) y recorridos guiados.
+- nosotros.html:
+  * Redacción institucional y visualización de valores principales y visión de movilidad sostenible.
+- reparar.html:
+  * Maquetación del flujo de trabajo del taller de mantenimiento y lista de servicios de reparación.
+- recorridos.html:
+  * Presentación de rutas oficiales (Río y Parques, Sabores de Barrio, Reto Las Palmas) con distancia, duración y nivel de dificultad.
+- reserva.html:
+  * Rediseño completo del formulario estructurado mediante fieldset, legend y labels.
+  * Integración de validaciones HTML5 (patterns para documento, celular, expresiones regulares y fechas).
+  * Inclusión de tarjetas interactivas de selección tipo radio para tipo de bicicleta y plan de alquiler.
+
+
+DISEÑO RESPONSIVE - RUEDA LIBRE v1.5
+
+1. Comportamiento del encabezado y el pie:
+- Encabezado: En pantallas móviles (360px), el logotipo se ubica arriba y el menú de navegación se acomoda debajo centrado gracias a Flexbox en columna. A partir de 768px (tablet y escritorio), cambia a una sola línea horizontal alineada a los extremos con 'justify-content: space-between'.
+- Pie de página: En móvil se apila verticalmente con los elementos centrados. En escritorio (768px en adelante), adopta una distribución horizontal en fila repartiendo el espacio de manera uniforme.
+
+2. Columnas de la flota observadas por ancho de pantalla (Grid):
+- A 1280 px (Escritorio): Se despliegan 4 columnas automáticas fluidas con 'auto-fit' y 'minmax(250px, 1fr)'.
+- A 900 px (Tablet): Se despliegan 3 columnas organizadas de manera limpia.
+- A 500 px (Móvil): El diseño se ajusta automáticamente a 1 o 2 columnas sin desbordar ni generar scroll horizontal.
+
+3. Decisiones de diseño (¿Flexbox o Grid?):
+- Flexbox: Se utilizó para elementos unidimensionales como el encabezado (alineación horizontal/vertical de enlaces), el pie de página y la distribución interna vertical de las tarjetas de la flota (para fijar el botón "Reservar" en la parte inferior).
+- Grid: Se empleó para estructuras bidimensionales complejas como la cuadrícula de la flota de bicicletas, el grid de servicios y la distribución de las tarjetas del banner principal, logrando adaptabilidad automática sin depender de media queries excesivas.
+
+4. Problemas responsive resueltos:
+- Problema 1: Las imágenes de los modelos de bicicletas se desbordaban en pantallas de 360px. Solución: Se aplicó la regla global 'max-width: 100%; height: auto;' y propiedades de 'object-fit: cover'.
+- Problema 2: Las descripciones de las tarjetas de la flota tenían longitudes distintas, lo que desalineaba los botones "Reservar". Solución: Se implementó un contenedor Flexbox en columna con 'justify-content: space-between' dentro de cada 'modelo-card', logrando que todos los botones quedaran perfectamente alineados al fondo.
+- Problema 3: Las tablas de tarifas generaban desplazamiento lateral molesto en celulares. Solución: Se envolvió la tabla en un contenedor con 'overflow-x: auto' y '-webkit-overflow-scrolling: touch'.
+
+
+
+INFORME COMPARATIVO: CSS PROPIO vs. BOOTSTRAP 5.3
+
+1. Tiempo invertido:
+- Versión en CSS propio (Sesión 4): ~3.5 horas diseñando media queries, grillas manuales y flexbox de ajuste.
+- Migración a Bootstrap 5.3 (Sesión 5): ~1.2 horas implementando clases predefinidas de grilla y utilidades.
+
+2. Reducción de líneas de código en styles.css:
+- Líneas en CSS propio (v1.5): ~450 líneas (incluyendo reglas extensas de media queries y adaptabilidad).
+- Líneas después de migrar a Bootstrap (v2.0-beta): ~180 líneas (conservando únicamente variables, identidad visual Riwi, tipografías y estilos base de tablas/formularios).
+- Reducción aproximada: 60% menos código CSS escrito a mano.
+
+3. Clases utilitarias destacadas consultadas en la documentación oficial:
+- `g-4`: Define un espacio (gutter) uniforme de 1.5rem entre elementos de la grilla.
+- `h-100`: Fuerza a que las tarjetas ocupen el 100% de la altura disponible de su contenedor padre.
+- `d-flex flex-column`: Convierte un contenedor en flexible con dirección vertical.
+- `d-none d-md-block`: Oculta un elemento en dispositivos móviles y lo muestra a partir del breakpoint 'md'.
+- `flex-column flex-md-row`: Cambia la orientación de los elementos de columna en móvil a fila horizontal en tablets y escritorios.
+
+4. Conflictos y solución durante la integración:
+- Conflicto 1: Los estilos de los enlaces (`<a>`) de Bootstrap sobrescribían el color verde institucional definido en las variables. Solución: Cargar la hoja `styles.css` estrictamente después del `<link>` de Bootstrap y ajustar la especificidad de los selectores.
+- Conflicto 2: Los márgenes globales (`margin` y `padding`) predeterminados en Bootstrap alteraban la separación de las secciones. Solución: Uso de utilidades de espaciado (`py-5`, `mb-4`) nativas de Bootstrap en lugar de reescribir bloques enteros de CSS.
+- Conflicto 3: Las tarjetas de la flota perdían alineación uniforme en pantallas medianas. Solución: Aplicar clases de utilidad de altura (`h-100`) y estructura flexible en los cuerpos de las tarjetas.
+
+5. Conclusión:
+La migración a Bootstrap 5.3 demostró acelerar de forma drástica el desarrollo responsive, eliminando la necesidad de escribir media queries personalizadas de diseño y reduciendo significativamente el mantenimiento del código CSS, sin sacrificar la identidad visual de la marca Rueda Libre.

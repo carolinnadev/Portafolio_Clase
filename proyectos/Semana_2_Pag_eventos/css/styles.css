@@ -1,0 +1,66 @@
+/* =========================================================
+   ESTILOS PERSONALIZADOS DE LA PLATAFORMA
+   ========================================================= */
+
+/* Suavizar la navegación interna (#inicio, #eventos, etc.) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------------
+   RUEDA LIBRE / CARRUSEL 3D
+   --------------------------------------------------------- */
+.carousel-3d-container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    position: relative;
+    user-select: none;
+}
+
+.carousel-3d-track {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-3d-item {
+    position: absolute;
+    width: 260px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -150px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #111827;
+    border: 1px solid #374151;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Efecto Neón activo en la tarjeta principal del carrusel */
+.carousel-3d-item.active {
+    border-color: #e822fe;
+    box-shadow: 0 0 20px rgba(232, 34, 254, 0.5);
+}
+
+/* Personalización de barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e822fe;
+}

@@ -1,0 +1,1000 @@
+PROMPT PARA COPILOT: AUDITORÍA Y CORRECCIÓN COMPLETA DE RUEDA LIBRE SEGÚN LAS ESPECIFICACIONES ORIGINALES DE RIWI
+
+OBJETIVO PRINCIPAL
+
+Necesito que audites, corrijas y completes mi proyecto existente Rueda Libre, tomando como referencia obligatoria todas las especificaciones de la actividad original de Riwi:
+
+DL_MEDC8+: T1.1 - HTML y CSS
+
+No tienes acceso al PDF original. Por eso, debes utilizar las especificaciones completas que aparecen en este prompt como fuente de requisitos.
+
+Tu objetivo es que el proyecto cumpla todos los requisitos correspondientes a Rueda Libre v1.0 y su evolución responsive v1.5, sin omitir ningún detalle funcional, visual, semántico, técnico ni de accesibilidad.
+
+No quiero recomendaciones para que yo haga los cambios. Quiero que revises y modifiques directamente los archivos del proyecto.
+
+El proyecto ya existe. No lo reconstruyas desde cero ni elimines trabajo correcto. Primero inspecciona todo el código, identifica las diferencias con los requisitos y después aplica las correcciones necesarias.
+
+No afirmes que el proyecto cumple totalmente hasta haber comprobado cada requisito.
+
+1. AUDITORÍA COMPLETA DEL PROYECTO
+
+Antes de modificar archivos:
+
+Inspecciona todas las carpetas y los archivos existentes.
+
+Revisa cada documento HTML, cada hoja CSS, las imágenes, los enlaces, los formularios, las tablas y la documentación.
+
+Identifica las páginas que ya existen, incluidas las adicionales que se hayan creado.
+
+Comprueba las rutas relativas de todos los recursos.
+
+Detecta estilos duplicados, conflictos CSS, errores de estructura, elementos sin estilos, enlaces rotos y componentes inconsistentes.
+
+Compara la implementación con cada requisito de este prompt.
+
+Conserva el contenido y el código que ya funcionan correctamente.
+
+Corrige directamente los incumplimientos que puedas resolver.
+
+Realiza una segunda auditoría después de terminar los cambios.
+
+No des por hecho que una página, una sección o una funcionalidad existe simplemente porque aparece mencionada aquí. Comprueba su estado real en el proyecto.
+
+2. ESTRUCTURA ORIGINAL DEL PROYECTO
+
+La estructura base de Rueda Libre es:
+
+rueda-libre/
+├── index.html
+├── paginas/
+│   ├── tarifas.html
+│   └── reservas.html
+├── css/
+│   └── styles.css
+├── img/
+├── bitacora.txt
+└── README.md
+
+Respeta la estructura real del repositorio y corrige las rutas según corresponda.
+
+Requisitos:
+
+index.html contiene la página principal.
+
+paginas/tarifas.html contiene las tarifas de alquiler y recorridos.
+
+paginas/reservas.html contiene el formulario de reservas.
+
+css/styles.css es la hoja de estilos compartida.
+
+img/ contiene el logo y las fotografías necesarias.
+
+bitacora.txt registra las pruebas y decisiones de desarrollo.
+
+README.md debe existir si corresponde a los entregables de la versión final.
+
+Las páginas principales deben compartir la misma identidad visual, navegación y pie de página.
+
+Usa rutas relativas. No utilices rutas absolutas de Windows como C:\... ni enlaces internos que solo funcionen en mi computadora.
+
+No cambies innecesariamente los nombres de archivos, las carpetas o las rutas que ya funcionan.
+
+Mi proyecto puede contener páginas adicionales, como recorridos, localización o reparación. Consérvalas, corrige sus enlaces y mantén la coherencia con la marca. No las elimines simplemente porque no formen parte de las tres páginas base.
+
+3. IDENTIDAD VISUAL OFICIAL
+
+La paleta original de Rueda Libre tiene exactamente estos cinco colores principales:
+
+Nombre
+
+Código
+
+Uso establecido
+
+Verde Ruta
+
+#1E7A4F
+
+Botones y enlaces
+
+Naranja Pedal
+
+#F39A2B
+
+Destacados y botones secundarios
+
+Azul Noche
+
+#14213D
+
+Títulos y encabezado
+
+Crema
+
+#FAF6EF
+
+Fondo general
+
+Gris Asfalto
+
+#5B6470
+
+Texto secundario
+
+Debes crear o corregir las variables CSS en :root para que todos los componentes reutilicen estos valores.
+
+Los nombres de las variables pueden seguir la nomenclatura que ya utiliza el proyecto, siempre que los valores sean correctos y consistentes.
+
+Si existen variables con nombres como --azul-noche, --verde-ruta, --naranja-pedal, --crema y --gris-asfalto, reutilízalas en lugar de crear duplicados.
+
+Uso obligatorio de los colores
+
+Verde Ruta #1E7A4F:
+
+Botones principales.
+
+Enlaces.
+
+Acciones principales y elementos interactivos destacados.
+
+Naranja Pedal #F39A2B:
+
+Elementos destacados.
+
+Etiquetas como «Nuevo».
+
+Botones secundarios y acentos visuales.
+
+Azul Noche #14213D:
+
+Encabezados.
+
+Títulos.
+
+Navegación y elementos de identidad de marca.
+
+Crema #FAF6EF:
+
+Fondo general.
+
+Superficies claras y áreas de contenido.
+
+Gris Asfalto #5B6470:
+
+Párrafos.
+
+Descripciones y texto secundario.
+
+No intercambies estos usos arbitrariamente. No introduzcas una paleta distinta en las páginas adicionales.
+
+Los estados hover y focus deben ser visibles, coherentes y legibles. No uses combinaciones que dificulten la lectura.
+
+4. TIPOGRAFÍAS Y VARIABLES CSS
+
+Las fuentes originales son:
+
+Montserrat, peso 700: títulos y encabezados.
+
+Open Sans, pesos 400 y 600: párrafos y textos.
+
+Cárgalas desde Google Fonts en las páginas correspondientes, con fuentes de respaldo. Los enlaces a las fuentes deben aparecer antes de la hoja de estilos.
+
+Define variables CSS para ambas familias tipográficas.
+
+También debes declarar una escala de espaciado de, como mínimo, tres tamaños en rem y reutilizarla en el proyecto.
+
+La hoja CSS debe incluir:
+
+box-sizing: border-box para todos los elementos.
+
+Un ancho máximo apropiado para el contenido.
+
+Márgenes automáticos para centrar el contenido principal.
+
+Variables para colores, fuentes y espaciados.
+
+Uso consistente de rem para tipografías y espaciados.
+
+Porcentajes para anchos fluidos cuando corresponda.
+
+px principalmente para bordes y detalles pequeños.
+
+Selectores agrupados para los encabezados.
+
+Comentarios sencillos para separar las secciones del CSS.
+
+Utiliza comentarios normales como /* NAVEGACION */ y /* TARJETAS */. No escribas comentarios decorativos extensos con líneas de símbolos.
+
+No utilices !important para resolver conflictos de estilos.
+
+5. PÁGINA PRINCIPAL: index.html
+
+Revisa y corrige la página de inicio para que contenga todas las secciones exigidas, en un orden lógico.
+
+Encabezado y navegación
+
+Debe incluir:
+
+Nombre del negocio.
+
+Navegación hacia las páginas existentes.
+
+Enlaces correctos a tarifas y reservas.
+
+Estilo consistente con el resto del sitio.
+
+Indicador visual de la página actual mediante una clase como activo, cuando corresponda.
+
+En escritorio, el nombre del negocio y el menú deben distribuirse de forma ordenada. En móvil, el nombre debe aparecer arriba y la navegación debajo, centrada.
+
+Portada
+
+Debe presentar el negocio con el nombre:
+
+Rueda Libre | Alquiler de bicicletas en Medellín
+
+Incluye el texto de bienvenida existente, una imagen principal y un enlace que permita continuar hacia el contenido del sitio.
+
+Debe conservarse un único h1 en la página.
+
+¿Quiénes somos?
+
+Debe describir el negocio y su actividad de alquiler de bicicletas en Medellín.
+
+Nuestros servicios
+
+Deben aparecer los tres servicios originales, cada uno con su propio subtítulo y descripción:
+
+Alquiler de bicicletas.
+
+Recorridos guiados.
+
+Taller básico de mantenimiento.
+
+El servicio de alquiler debe explicar sus beneficios y mencionar que las tarifas incluyen casco y candado.
+
+El servicio de recorridos debe describir la experiencia y ofrecer un enlace directo a la sección de recorridos de paginas/tarifas.html.
+
+El taller básico debe tener su propio subtítulo y un párrafo explicativo.
+
+Cada tarjeta de servicio debe incluir relleno, borde, esquinas redondeadas, separación, imagen y colores de marca.
+
+En la versión ampliada, la bicicleta eléctrica debe incluir una etiqueta «Nuevo», ubicada en una esquina de la tarjeta sin desplazar su contenido.
+
+¿Cómo alquilar?
+
+Incluye exactamente cuatro pasos en una lista ordenada con ol y li.
+
+Beneficios
+
+Incluye tres beneficios en una lista con viñetas.
+
+Nuestra flota
+
+La versión responsive incorpora una sección de tarjetas para la flota de bicicletas. Debe cumplir todos los requisitos del apartado 8 de este prompt.
+
+Nuestras rutas
+
+Debe presentar una galería de tres rutas guiadas, con información coherente con las tarifas oficiales.
+
+Encuéntranos
+
+Incluye la ubicación y el enlace al mapa correspondiente.
+
+Debe existir un enlace interno desde el primer párrafo de la página hacia esta sección.
+
+Imágenes obligatorias
+
+La página principal necesita al menos tres imágenes locales:
+
+Una imagen de portada.
+
+Una imagen de una bicicleta.
+
+Una imagen de una ruta.
+
+Las imágenes deben estar guardadas en img/, utilizar rutas relativas, tener atributo alt descriptivo y ancho definido.
+
+No inventes nombres de imágenes que no existan. Inspecciona la carpeta y corrige las rutas según los archivos reales.
+
+Enlaces obligatorios
+
+Comprueba que existan:
+
+Un enlace absoluto hacia la ubicación en un mapa que abra en otra pestaña.
+
+Un enlace al correo hola@ruedalibre.example con mailto:.
+
+Un enlace interno a la sección Encuéntranos.
+
+Un enlace a tarifas.
+
+Un enlace a reservas.
+
+Los enlaces de las tarjetas de bicicletas y rutas deben llevar a destinos válidos.
+
+6. PÁGINA DE TARIFAS: paginas/tarifas.html
+
+Esta página debe mostrar dos tablas HTML accesibles. Los precios deben coincidir exactamente con los datos originales.
+
+Tabla 1. Tarifas de alquiler
+
+Tipo de bicicleta
+
+1 hora
+
+Medio día (4 h)
+
+Día completo
+
+Urbana
+
+$10.000
+
+$30.000
+
+$50.000
+
+Montaña
+
+$15.000
+
+$45.000
+
+$70.000
+
+Eléctrica
+
+$25.000
+
+$70.000
+
+$110.000
+
+Tabla 2. Recorridos guiados
+
+Recorrido
+
+Distancia
+
+Duración
+
+Nivel
+
+Precio por persona
+
+Río y Parques
+
+12 km
+
+2 h
+
+Fácil
+
+$45.000
+
+Sabores de Barrio
+
+18 km
+
+3 h
+
+Medio
+
+$60.000
+
+Reto Las Palmas
+
+25 km
+
+4 h
+
+Difícil
+
+$85.000
+
+Información adicional obligatoria
+
+Todas las tarifas incluyen casco y candado.
+
+Los recorridos salen los sábados y domingos a las 7:00 a. m.
+
+Para los recorridos se recomienda llevar ropa cómoda, agua, protector solar y documento de identidad.
+
+Requisitos técnicos de las tablas
+
+Utiliza:
+
+table
+
+caption
+
+thead
+
+tbody
+
+tr
+
+th
+
+td
+
+Cada tabla debe tener un título con caption, encabezados apropiados y atributos scope="col" o scope="row" según corresponda.
+
+No dejes celdas vacías. Las recomendaciones deben mostrarse mediante párrafos y listas, no mediante tablas usadas únicamente para diseño.
+
+Asigna un id a la sección de recorridos para que pueda abrirse directamente desde la página de inicio.
+
+El logo y los enlaces deben funcionar desde la carpeta paginas/, incluyendo el regreso al inicio y el acceso a reservas.
+
+Los precios no pueden cambiarse ni sustituirse por valores aproximados.
+
+7. PÁGINA DE RESERVAS: paginas/reservas.html
+
+La página debe incluir el título principal Reserva tu bicicleta, los datos de contacto y el formulario completo.
+
+Información de contacto
+
+Correo electrónico: hola@ruedalibre.example, enlazado mediante mailto:.
+
+Horario de atención:
+
+Lunes a viernes: 7:00 a. m. a 7:00 p. m.
+
+Sábados, domingos y festivos: 6:00 a. m. a 2:00 p. m.
+
+Presenta el horario mediante una lista de definiciones con dl, dt y dd cuando corresponda al esquema original.
+
+Campos y validaciones obligatorias
+
+Campo
+
+Regla
+
+Nombre completo
+
+Obligatorio, mínimo 3 caracteres
+
+Documento
+
+Obligatorio, solo números, entre 6 y 10 dígitos
+
+Correo
+
+Obligatorio, formato válido
+
+Celular
+
+Obligatorio, 10 dígitos y comienza por 3
+
+Fecha del alquiler
+
+Obligatoria, del 1 de noviembre al 31 de diciembre de 2026
+
+Tipo de bicicleta
+
+Obligatorio
+
+Plan
+
+Obligatorio
+
+Cantidad de bicicletas
+
+Obligatoria, entre 1 y 6
+
+Comentarios
+
+Opcionales, máximo 300 caracteres
+
+Políticas de alquiler
+
+Aceptación obligatoria
+
+Requisitos técnicos del formulario
+
+Cada campo debe tener su label asociado mediante for e id.
+
+Todos los controles deben tener name.
+
+Utiliza required, minlength, maxlength, pattern, title, min y max según corresponda.
+
+Usa tipos de campo apropiados, como email, number y date.
+
+Agrupa campos relacionados mediante fieldset y legend cuando corresponda.
+
+Las opciones de tipo de bicicleta deben compartir el mismo name cuando se utilice selección única.
+
+El orden de navegación por teclado debe ser lógico.
+
+Los campos deben tener un estado de foco visible.
+
+El botón de envío debe ser un button type="submit".
+
+Pruebas concretas:
+
+El celular 3001234567 debe aceptarse.
+
+El celular 1234567890 debe rechazarse.
+
+El celular 300123 debe rechazarse.
+
+El documento debe rechazar letras.
+
+La fecha debe rechazar valores fuera del intervalo definido.
+
+La cantidad debe aceptar únicamente valores de 1 a 6.
+
+No debe poder enviarse el formulario con campos obligatorios incompletos.
+
+Registra al menos ocho pruebas en bitacora.txt, incluyendo campo, dato de prueba, resultado esperado y resultado obtenido.
+
+No simules que una reserva se guarda en una base de datos ni que se envía a un servidor si esa funcionalidad no existe. La validación HTML no equivale a un sistema real de reservas.
+
+8. FLOTA DE SIETE BICICLETAS
+
+La versión responsive debe incluir estos siete modelos:
+
+Modelo
+
+Descripción
+
+Precio por hora
+
+Urbana Clásica
+
+Cómoda y liviana para las ciclorrutas
+
+$10.000
+
+Urbana Plegable
+
+Se dobla en segundos; ideal para combinar con el metro
+
+$12.000
+
+Montaña Trail
+
+Suspensión delantera y 21 cambios para las subidas
+
+$15.000
+
+Gravel Aventura
+
+Para rutas mixtas de asfalto y destapado
+
+$18.000
+
+Eléctrica Urbana
+
+Asistencia eléctrica con 45 km de autonomía
+
+$25.000
+
+Infantil
+
+Para niños de 6 a 10 años
+
+$8.000
+
+Tándem
+
+Para dos personas; perfecta para pasear en pareja
+
+$20.000
+
+Cada tarjeta debe incluir:
+
+Fotografía.
+
+Nombre del modelo.
+
+Descripción.
+
+Precio por hora.
+
+Enlace «Reservar» con destino válido.
+
+La cuadrícula debe adaptarse al ancho disponible. Utiliza CSS Grid con grid-template-columns, repeat(), auto-fit, minmax(), fr y gap, cuando corresponda.
+
+Utiliza Flexbox dentro de cada tarjeta para distribuir el contenido y mantener los botones alineados al final, aunque las descripciones tengan longitudes diferentes.
+
+No inventes modelos ni alteres los precios de la tabla.
+
+9. DISEÑO CSS COMPARTIDO
+
+Organiza css/styles.css por secciones funcionales:
+
+Variables.
+
+Estilos generales.
+
+Encabezado y navegación.
+
+Portada.
+
+Servicios.
+
+Flota.
+
+Rutas.
+
+Tablas.
+
+Formulario.
+
+Botones y enlaces.
+
+WhatsApp.
+
+Pie de página.
+
+Diseño responsive.
+
+Las tres páginas principales deben compartir los mismos estilos desde una sola hoja CSS externa.
+
+No utilices estilos en línea ni etiquetas <style>.
+
+El diseño debe ser profesional, ordenado y coherente. No basta con cambiar colores: revisa jerarquía visual, espaciado, alineación, tamaños de texto, imágenes, tarjetas y navegación.
+
+Las tablas deben tener bordes visibles, relleno suficiente y encabezados legibles.
+
+El formulario debe tener etiquetas encima de los campos, separación entre grupos, campos de ancho apropiado y un botón claro.
+
+Evita reglas duplicadas, selectores innecesariamente complejos y conflictos de especificidad.
+
+Los enlaces y botones deben contar con estados hover y focus. No elimines el indicador de foco sin proporcionar otro visible.
+
+10. ENLACE FLOTANTE DE WHATSAPP
+
+Las tres páginas principales deben incluir un enlace de WhatsApp visible.
+
+Requisitos originales:
+
+Texto visible: WhatsApp.
+
+Destino: https://wa.me/573000000000.
+
+Debe abrir en otra pestaña.
+
+Debe tener posición fija en la esquina inferior derecha.
+
+Debe seguir visible al hacer scroll.
+
+No debe tapar contenido importante.
+
+Debe poder enfocarse y activarse con el teclado.
+
+Utiliza los atributos de seguridad apropiados para los enlaces que abren otra pestaña.
+
+Conserva el número definido en las especificaciones, sin sustituirlo por un número inventado.
+
+11. CONTRASTE Y ACCESIBILIDAD
+
+Comprueba las combinaciones de colores con un verificador de contraste o con DevTools.
+
+Criterios:
+
+Texto normal: contraste mínimo de 4.5:1.
+
+Texto grande: contraste mínimo de 3:1.
+
+Evalúa expresamente estas combinaciones:
+
+Blanco sobre Verde Ruta.
+
+Blanco sobre Naranja Pedal.
+
+Azul Noche sobre Naranja Pedal.
+
+Azul Noche sobre Crema.
+
+Gris Asfalto sobre Crema.
+
+Verde Ruta sobre Crema.
+
+Naranja Pedal sobre Crema.
+
+Blanco sobre Azul Noche.
+
+No supongas que todas cumplen. Comprueba los resultados y registra las conclusiones en la bitácora.
+
+Si una combinación no cumple, corrige el color del texto o del fondo utilizando una combinación aprobada de la identidad de marca.
+
+También verifica:
+
+lang="es" en los documentos.
+
+Un único h1 por página.
+
+Jerarquía correcta de encabezados.
+
+alt descriptivo para imágenes informativas.
+
+alt="" para imágenes decorativas.
+
+Etiquetas asociadas a los campos.
+
+Enlaces con textos descriptivos.
+
+Navegación mediante Tab, Shift + Tab y Enter.
+
+Indicadores de foco visibles.
+
+Ausencia de errores en la carga de recursos.
+
+12. DISEÑO RESPONSIVE
+
+El proyecto debe adaptarse a móviles, tabletas y escritorio mediante CSS propio, Flexbox, Grid y media queries.
+
+Prueba estos anchos:
+
+Dispositivo
+
+Ancho
+
+Móvil
+
+360 px
+
+Tableta
+
+768 px
+
+Escritorio
+
+1200 px
+
+Verificación adicional de entrega
+
+1280 px
+
+En móvil:
+
+El menú debe reorganizarse sin desbordarse.
+
+Las tarjetas deben apilarse en una columna cuando sea necesario.
+
+Las imágenes no deben exceder el ancho de su contenedor.
+
+El formulario debe ocupar el ancho disponible.
+
+Las tablas deben permanecer legibles sin generar desplazamiento horizontal.
+
+Los botones deben seguir siendo accesibles.
+
+No debe aparecer scroll horizontal en la página.
+
+En escritorio:
+
+La portada debe tener texto a la izquierda e imagen a la derecha.
+
+La flota debe presentarse en una cuadrícula.
+
+Las tres rutas deben aparecer en una fila cuando haya espacio suficiente.
+
+El formulario debe ocupar aproximadamente dos tercios del espacio y la información de contacto un tercio.
+
+El pie de página debe distribuir marca, contacto y horario en tres bloques.
+
+Utiliza los puntos de quiebre de forma coherente:
+
+Base: 0 px.
+
+sm: 576 px.
+
+md: 768 px.
+
+lg: 992 px.
+
+xl: 1200 px.
+
+Para los ajustes responsive concretos, utiliza media queries desde 768 px y 1200 px cuando sean necesarias.
+
+13. BITÁCORA Y DOCUMENTACIÓN
+
+Revisa bitacora.txt y completa la información exigida por la actividad.
+
+Debe registrar, según corresponda:
+
+Pruebas realizadas.
+
+Errores encontrados y correcciones.
+
+Pruebas de validación del formulario.
+
+Auditoría de accesibilidad.
+
+Resultados de contraste.
+
+Mediciones y pruebas responsive.
+
+Decisiones de diseño.
+
+Tiempo real de trabajo cuando sea solicitado.
+
+Aspectos pendientes.
+
+La documentación debe reflejar pruebas reales. No inventes resultados, capturas, commits ni enlaces publicados.
+
+Si el proyecto ya tiene un README.md, consérvalo y actualízalo con la descripción del sitio, páginas, tecnologías, enlaces publicados, aprendizajes y evidencias requeridas por la entrega final.
+
+14. GIT, GITHUB Y PUBLICACIÓN
+
+Comprueba los requisitos de entrega:
+
+Repositorio público rueda-libre.
+
+Archivos organizados y versionados.
+
+Commits con mensajes descriptivos.
+
+Repositorio actualizado en GitHub.
+
+Sitio publicado mediante GitHub Pages.
+
+Enlaces e imágenes funcionales en producción.
+
+No ejecutes operaciones destructivas de Git ni sobrescribas cambios del usuario.
+
+No afirmes que el sitio está publicado si no has podido comprobarlo. Si falta una acción que requiere mis credenciales o intervención, indica exactamente cuál.
+
+15. PÁGINAS ADICIONALES EXISTENTES
+
+Si el proyecto contiene páginas adicionales, por ejemplo recorridos.html, localizanos.html o reparar.html, también debes auditarlas.
+
+Estas páginas deben:
+
+Mantener la paleta oficial.
+
+Utilizar Montserrat y Open Sans.
+
+Compartir el encabezado, la navegación y el pie de página.
+
+Tener enlaces correctos.
+
+Utilizar la hoja CSS compartida.
+
+Cumplir las reglas de accesibilidad y diseño responsive.
+
+No duplicar innecesariamente componentes ni variables.
+
+Los recorridos deben conservar los nombres, distancias, duraciones, dificultades y precios originales.
+
+La información adicional que no figure en las especificaciones debe conservarse únicamente si ya existe y no contradice los datos originales. No inventes direcciones, datos de contacto ni servicios.
+
+16. ETAPAS POSTERIORES DEL MATERIAL DE RIWI
+
+El material completo también presenta versiones posteriores del ecosistema Rueda Libre.
+
+Si el repositorio actual contiene la migración a Bootstrap, la versión v2.0, o la landing nocturna/ para Rueda Nocturna, no elimines esas partes ni las sustituyas por CSS genérico.
+
+En ese caso, comprueba los requisitos específicos de esas etapas que correspondan a los archivos existentes:
+
+Migración del sitio a Bootstrap y comparación con la versión CSS propia.
+
+Navbar adaptable, tarjetas, carrusel, formulario, alertas y modal cuando sean requeridos.
+
+Personalización mediante la identidad de marca.
+
+Landing de Rueda Nocturna en Tailwind CSS.
+
+Configuración de Tailwind CLI y archivo CSS compilado cuando corresponda.
+
+Diseño responsive y modo oscuro en la landing.
+
+Enlaces entre la landing y el sitio principal.
+
+Coherencia de colores, tipografías y datos de contacto.
+
+Publicación y comprobación de enlaces.
+
+No añadas una migración ni una dependencia a una versión que no forme parte del alcance actual. Primero determina qué entregables existen en el repositorio y cuáles se están construyendo.
+
+17. REGLAS OBLIGATORIAS DURANTE EL TRABAJO
+
+Trabaja directamente sobre el código existente.
+
+No reconstruyas todo desde cero.
+
+No elimines archivos ni funcionalidades que ya funcionan correctamente.
+
+No cambies los precios, los nombres de las bicicletas ni los datos originales.
+
+No inventes contenido ausente.
+
+No introduzcas frameworks adicionales sin que correspondan a la etapa del proyecto.
+
+No utilices Bootstrap en la versión CSS propia si el archivo pertenece a esa etapa; conserva Bootstrap únicamente donde lo requiera la versión correspondiente.
+
+No introduzcas Tailwind en el sitio base si no forma parte de su etapa.
+
+Mantén el código comprensible para alguien que está aprendiendo HTML y CSS.
+
+Reutiliza las variables, clases y componentes existentes cuando sean adecuados.
+
+No dupliques reglas CSS.
+
+Corrige las rutas según la ubicación real de cada archivo.
+
+No dejes enlaces vacíos ni destinos inexistentes.
+
+No marques como cumplido algo que no hayas verificado.
+
+No te detengas en la página principal: revisa todo el proyecto.
+
+No me entregues únicamente sugerencias; aplica las correcciones.
+
+18. VERIFICACIÓN FINAL
+
+Al terminar, realiza una auditoría final y comprueba uno por uno los siguientes aspectos:
+
+Estructura de archivos.
+
+Contenido de la página principal.
+
+Tres servicios originales.
+
+Cuatro pasos para alquilar.
+
+Tres beneficios.
+
+Imágenes locales y atributos alt.
+
+Enlaces internos, externos y de correo.
+
+Tabla de tarifas de alquiler.
+
+Tabla de recorridos guiados.
+
+Siete modelos de bicicletas.
+
+Formulario con todas las reglas de validación.
+
+Al menos ocho pruebas documentadas del formulario.
+
+Paleta oficial y tipografías.
+
+Variables CSS y escala de espaciado.
+
+Navegación compartida.
+
+Estados hover y focus.
+
+Enlace flotante de WhatsApp.
+
+Contraste de colores.
+
+Accesibilidad por teclado.
+
+Diseño responsive en los anchos definidos.
+
+Ausencia de errores de rutas y recursos.
+
+Bitácora y README.
+
+Estado del repositorio y publicación.
+
+Corrige todos los incumplimientos que puedas resolver dentro del proyecto.
+
+INFORME FINAL OBLIGATORIO
+
+Cuando termines, entrégame un resumen breve y preciso con:
+
+Archivos revisados.
+
+Archivos modificados.
+
+Correcciones implementadas.
+
+Requisitos cumplidos y cómo los verificaste.
+
+Requisitos pendientes, indicando exactamente qué falta.
+
+Problemas que no pudiste comprobar.
+
+Si quedan tareas manuales necesarias para completar la entrega.
+
+CRITERIO DE FINALIZACIÓN: no termines simplemente porque el sitio se vea profesional. Termina cuando el código existente haya sido contrastado con todos los requisitos aplicables de este prompt, se hayan corregido los incumplimientos y se haya verificado el resultado sin introducir cambios innecesarios.
+
+Empieza inspeccionando los archivos del proyecto. Después aplica las correcciones y ejecuta la auditoría final.
