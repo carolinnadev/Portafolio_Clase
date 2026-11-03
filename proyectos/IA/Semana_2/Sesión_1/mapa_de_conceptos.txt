@@ -1,0 +1,53 @@
+================================================================================
+                    MAPA DE CONCEPTOS: FUNDAMENTOS DE IA
+================================================================================
+
+                                INTELIGENCIA ARTIFICIAL
+                                           │
+         ┌─────────────────────────────────┴─────────────────────────────────┐
+                ▼                                                                   			         ▼
+┌─────────────────────────────────┐                         ┌─────────────────────────────────┐
+│       PROGRAMACIÓN POR REGLAS   │                         │     APRENDIZAJE DE EJEMPLOS     │
+│       (Código Tradicional)      │                         │       (Machine Learning)        │
+└────────────────┬────────────────┘                         └────────────────┬────────────────┘
+                 │                                                           │
+   • Funciona con algoritmos fijos.                            • Encuentra patrones en datos
+   • Reglas estrictas (IF / ELSE).                               existentes (entrenamiento).
+   • Si el caso no se contempló,                              • Capaz de generalizar ante
+     el sistema falla o da error.                                datos totalmente nuevos.
+                 │                                                           │
+                	  ▼                                                           			         ▼
+       [RETO 1: Tarjetas]                                          [RETO 2: Clasificador]
+   (Pasos fijos para ordenar                                    (Deducir patrones para
+    tarjetas con números)                                        detectar spam/no spam)
+                                                                             │
+                                                                             				         ▼
+                                                            ┌─────────────────────────────────┐
+                                                            │          IA GENERATIVA          │
+                                                            └────────────────┬────────────────┘
+                                                                             │
+                                                               • Crea contenido nuevo
+                                                                 (texto, código, imágenes)
+                                                                 basándose en el modelo.
+                                                                             │
+                                                                             				         ▼
+                                                                   [RETO 3: Asistente]
+                                                               (Combinación de R, M y H)
+
+================================================================================
+              ESTRUCTURA DE FLUJO PARA EL ASISTENTE (RETO 3)
+================================================================================
+
+R [Reglas (If/Else)] ────► M [Modelo (IA/Generativa)] ────► H [Revisión Humana]
+(Validación de entrada,     (Procesa, busca en guías       (Casos ambiguos,
+ formatos, errores)          y genera respuestas)           calificaciones, faltas)
+
+================================================================================
+                      ENTREGABLE FINAL
+================================================================================
+
+1. Esquema del Mapa de Conceptos (Reglas vs. ML vs. Generativa).
+2. Flujo del Asistente marcado con R, M y H.
+3. Declaración de límites:
+   "Nuestro asistente ayuda a ______________________, 
+    pero todavía no debe ______________________."

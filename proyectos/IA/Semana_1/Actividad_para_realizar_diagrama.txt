@@ -1,0 +1,8 @@
+Trabajo de IA:
+
+    Copiar un algoritmo que permite poner los numero de menor a mayor
+
+Variables: x,y,z
+X = 3
+Y = 7
+Z = 5

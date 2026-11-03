@@ -1,0 +1,34 @@
+================================================================================
+TABLA DE DECISIÓN - TARIFAS DEL PARQUEADERO
+================================================================================
+
+Condiciones:
+- C1: Horas <= 0
+- C2: Con Factura Y Horas <= 2
+- C3: Horas > 6
+
+Reglas de Negocio:
+--------------------------------------------------------------------------------
+Reglas                         | Regla 1  | Regla 2  | Regla 3  | Regla 4  
+--------------------------------------------------------------------------------
+C1 (Horas <= 0)                | Verdadero| Falso    | Falso    | Falso    
+C2 (Con Factura Y Horas <= 2)  | -        | Verdadero| Falso    | Falso    
+C3 (Horas > 6)                 | -        | -        | Verdadero| Falso    
+--------------------------------------------------------------------------------
+Acción / Resultado             | Error    | Total $0 | Plano $20k| Horas * $3k
+================================================================================
+
+
+================================================================================
+PRUEBA DE ESCRITORIO CON CASOS BORDE
+================================================================================
+
+Caso Borde                        Entrada (Horas, Factura)    Resultado Esperado   Estado
+----------------------------------------------------------------------------------------
+1. Límite inferior (Error)        0 horas, Sin factura        Error                ✅
+2. Fracción inicial               0.5 horas, Sin factura      $3.000               ✅
+3. Límite exacto con factura      2 horas, Con factura        $0                   ✅
+4. Superando límite con factura   2.1 horas, Con factura      $3.000               ✅
+5. Límite de tarifa normal        6 horas, Sin factura        $18.000              ✅
+6. Límite de tarifa plana         6.01 horas, Sin factura     $20.000              ✅
+================================================================================

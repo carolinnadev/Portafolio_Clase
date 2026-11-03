@@ -1,0 +1,113 @@
+================================================================================
+                    ENTREGAS DE RETO - SISTEMAS E IA
+================================================================================
+
+PUNTO 1: CONCEPTOS DE IA Y CASO DE USO DELIMITADO
+--------------------------------------------------------------------------------
+
+1.1 MAPA DE CONCEPTOS (Relación jerárquica)
+
+[ INTELIGENCIA ARTIFICIAL (IA) ]
+  └── Concepto general: Cualquier sistema informático que simula la capacidad 
+      humana de resolver problemas, razonar y aprender.
+      │
+      └── [ MACHINE LEARNING / APRENDIZAJE AUTOMÁTICO (ML) ]
+            └── Subcampo de la IA: Sistemas que aprenden a identificar patrones 
+                y tomar decisiones directamente a partir de datos, sin ser 
+                programados explícitamente regla por regla.
+                │
+                └── [ APRENDIZAJE PROFUNDO / DEEP LEARNING (DL) ]
+                      └── Subcampo del ML: Utiliza redes neuronales artificiales 
+                          de múltiples capas para procesar volúmenes masivos de 
+                          datos no estructurados (imágenes, voz, texto).
+                          │
+                          └── [ IA GENERATIVA ]
+                                └── Tipo especializado de DL: Modelos diseñados 
+                                    no solo para clasificar o predecir, sino 
+                                    para CREAR contenido nuevo (texto, código, 
+                                    imágenes, audio) basándose en los patrones 
+                                    aprendidos.
+
+---
+
+1.2 CASO DE USO DELIMITADO
+
+* Tarea o Problema: Redacción automática de resúmenes ejecutivos para correos electrónicos largos de soporte técnico interno.
+* Tecnología usada: IA Generativa (Basada en un modelo de lenguaje de Deep Learning).
+* Alcance (Lo que SÍ hace):
+  - Lee el cuerpo de un correo de soporte enviado por un empleado.
+  - Genera un resumen de máximo 3 viñetas con el problema principal y los pasos intentados.
+* Límites (Lo que NO hace):
+  - NO responde al cliente final.
+  - NO ejecuta acciones en la base de datos ni resuelve la incidencia por sí sola.
+  - NO interpreta correos que contengan archivos adjuntos en formato imagen o audio.
+
+
+================================================================================
+PUNTO 2: DOS ENTRADAS DE BITÁCORA ("La feria de las máquinas")
+--------------------------------------------------------------------------------
+
+2.1 ENTRADA DE BITÁCORA 1
+* Caso elegido: La máquina expendedora automática de boletos para atracciones.
+* Mecanismo: Clasificación automática de monedas e impresión de ticket según el valor ingresado.
+* Pista del enunciado: "La máquina acepta dinero en efectivo, pero solo detecta el peso y tamaño de la moneda para determinar su valor".
+* Posible error: Aceptar fichas metálicas o monedas extranjeras del mismo peso y tamaño que una moneda legítima, entregando boletos válidos de forma fraudulenta.
+
+2.2 ENTRADA DE BITÁCORA 2
+* Caso elegido: El sistema de torniquetes de acceso mecánico.
+* Mecanismo: Liberación del bloqueo físico mediante la lectura de un código QR impreso.
+* Pista del enunciado: "El lector valida la firma del código impreso sin consultar una base de datos en tiempo real para acelerar el ingreso".
+* Posible error: Un asistente puede duplicar o fotocopiar el mismo código QR y permitir la entrada de múltiples personas con un solo boleto antes de que expire el tiempo de validez.
+
+
+================================================================================
+PUNTO 3: TARJETA DE DECISIÓN ("El negocio de libros de la abuela")
+--------------------------------------------------------------------------------
+
+Pedido analizado: Solicitud de recomendación y envío de un libro descatalogado para un cliente recurrente.
+
+Línea 1 - Necesidad: El cliente necesita localizar un ejemplar antiguo específico que no está en los estantes principales.
+Línea 2 - Entrada: Título del libro, nombre del cliente y estado de inventario del depósito secundario.
+Línea 3 - Solución elegida: Reservar el libro físicamente en la bodega y programar el despacho en un plazo máximo de 48 horas.
+Línea 4 - Razón: Mantiene la fidelización del cliente garantizando el ejemplar antes de ofrecerlo al público general.
+Línea 5 - Riesgo: Que el ejemplar guardado en bodega presente daños físicos no detectados en el sistema al momento de empaquetarlo.
+
+
+================================================================================
+PUNTO 4: EL PASAPORTE DEL PRIMER ASISTENTE
+--------------------------------------------------------------------------------
+
+<!-- Código HTML listo para pegar en Moodle o usar como texto estructurado -->
+
+<div style="border: 2px solid #2B547E; padding: 20px; background-color: #F4F6F9; font-family: Arial, sans-serif; border-radius: 8px;">
+  <h2 style="color: #2B547E; margin-top: 0;">PASAPORTE DEL ASISTENTE: Gestor de Preguntas Frecuentes de la Tienda</h2>
+  
+  <p><strong>1. Usuario y Problema:</strong><br>
+  Dirigido a clientes del negocio de la abuela que consultan por horarios, estado de envíos y políticas de devolución, reduciendo la saturación de atención telefónica.</p>
+  
+  <p><strong>2. Alcance:</strong><br>
+  Responde dudas frecuentes predefinidas sobre la tienda e informa el estado general de pedidos con número de seguimiento. Queda fuera de su alcance la modificación de pedidos, reembolsos directos o cancelación de compras.</p>
+  
+  <p><strong>3. Datos:</strong><br>
+  Base de conocimiento con políticas de la tienda, catálogo público y tabla de estados de envío vinculada a códigos de rastreo.</p>
+  
+  <p><strong>4. Regla:</strong><br>
+  No debe ofrecer descuentos, modificar precios ni prometer fechas de entrega exactas que no estén confirmadas por el sistema de logística.</p>
+  
+  <p><strong>5. Modelo y Humano:</strong><br>
+  El modelo de IA filtra, clasifica la intención del usuario y responde consultas estándar. Si el cliente solicita una devolución o expresa insatisfacción, el asistente transfiere inmediatamente el caso a un agente humano.</p>
+  
+  <p><strong>6. Mensaje de límite exacto:</strong><br>
+  <em>"Solo puedo ayudarte con información general de la tienda y el estado de tu pedido. Para cambios, devoluciones o soporte personalizado, te conectaré en este momento con un encargado humano."</em></p>
+</div>
+
+
+================================================================================
+PUNTO 5: RESUMEN DE CRITERIOS DE REVISIÓN
+--------------------------------------------------------------------------------
+
+* Precisión de conceptos: Se distingue con claridad la jerarquía de IA, ML, DL e IA Generativa sin solapar sus responsabilidades.
+* Coartada en pistas: Las entradas de bitácora se construyen directamente a partir de las limitaciones físicas y lógicas descritas en las situaciones observadas.
+* Asistente bien delimitado: El pasaporte especifica de forma transparente sus funciones exactas (informar y rastrear) y lo que no puede hacer (procesar cobros o cancelar).
+* Reconocimiento de un límite: El asistente cuenta con un mensaje de límite explícito y un protocolo claro de derivación hacia un operador humano cuando la tarea excede su capacidad.
+================================================================================

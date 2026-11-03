@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asistente de Conocimiento · Tareas e IA</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <main class="chat-card">
+            <header class="chat-header">
+                <h1><span class="status-dot"></span> Asistente de Conocimiento</h1>
+                <span class="session-badge">Sesión 1</span>
+            </header>
+
+            <section class="chat-body" id="chatBody">
+                <article class="message bot">
+                    <span class="message-tag tag-m">Modelo M</span><br>
+                    Hola. Escribe tu duda conceptual sobre el video o los retos de hoy para analizarla.
+                </article>
+            </section>
+
+            <!-- Límite visible del asistente -->
+            <aside class="limit-banner">
+                <strong>Límite:</strong> No resuelve exámenes ni modifica notas registradas.
+            </aside>
+
+            <form class="chat-footer" id="chatForm">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    class="chat-input" 
+                    placeholder="Escribe tu consulta..." 
+                    autocomplete="off" 
+                />
+                <button type="submit" class="send-btn">Enviar</button>
+            </form>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Que es K.I.S.S en IA
+
+En IA, K.I.S.S. (Keep It Simple, Stupid) es el principio que prioriza la solución más sencilla y directa antes de recurrir a modelos complejos. Busca usar algoritmos básicos en lugar de redes gigantescas si estos resuelven el problema con eficacia. Esto reduce drásticamente los costos, evita el sobreajuste (overfitting) y facilita la depuración y el mantenimiento del sistema.
