@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chatInput.disabled = true;
 
       try {
-        const response = await fetch('/api/chat', {
+        const response = await fetch('ttps://carito2.app.n8n.cloud/webhook/chat-portafolio', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
