@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chatInput.disabled = true;
 
       try {
-        const response = await fetch('https://carito2.app.n8n.cloud/webhook/chat-portafolio', {
+        const response = await fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -420,19 +420,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('visibilitychange', startSnake);
   }
 
-  // Proyectos adicionales: alterna su visibilidad y actualiza el texto del botón en conjunto.
-  const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
-  const btnText = document.getElementById('btnText');
-  const extraProjects = document.querySelectorAll('.extra-project');
+// Proyectos Team Lead
+const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
+const btnText = document.getElementById('btnText');
+const sectionTeamLead = document.getElementById('proyectos_team_lead');
 
-  if (toggleProjectsBtn && btnText) {
-    toggleProjectsBtn.addEventListener('click', () => {
-      const isExpanded = toggleProjectsBtn.getAttribute('aria-expanded') !== 'true';
-      toggleProjectsBtn.setAttribute('aria-expanded', String(isExpanded));
+if (toggleProjectsBtn && btnText && sectionTeamLead) {
+  // Selecciona solo los proyectos extra de ESTA sección
+  const extraProjects = sectionTeamLead.querySelectorAll('.extra-project');
+
+  toggleProjectsBtn.addEventListener('click', () => {
+    const isExpanded = toggleProjectsBtn.getAttribute('aria-expanded') !== 'true';
+    toggleProjectsBtn.setAttribute('aria-expanded', String(isExpanded));
+    extraProjects.forEach(project => project.classList.toggle('hidden', !isExpanded));
+    btnText.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
+  });
+}
+
+
+// Proyectos IA
+const sectionIA = document.getElementById('proyectos_ia');
+
+if (sectionIA) {
+  const toggleProjectsBtnIA = sectionIA.querySelector('#toggleProjectsBtn');
+  const btnTextIA = sectionIA.querySelector('#btnText');
+  const extraProjects = sectionIA.querySelectorAll('.extra-project');
+
+  if (toggleProjectsBtnIA && btnTextIA) {
+    toggleProjectsBtnIA.addEventListener('click', () => {
+      const isExpanded = toggleProjectsBtnIA.getAttribute('aria-expanded') !== 'true';
+      toggleProjectsBtnIA.setAttribute('aria-expanded', String(isExpanded));
       extraProjects.forEach(project => project.classList.toggle('hidden', !isExpanded));
-      btnText.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
+      btnTextIA.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
     });
   }
+}
+
+  
 
   // Envía el formulario al backend del mismo origen; las credenciales SMTP nunca salen del servidor.
   const contactForm = document.getElementById('contactForm');

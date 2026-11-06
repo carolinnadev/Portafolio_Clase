@@ -1,0 +1,199 @@
+======================================================================
+
+EVIDENCIA DE CIERRE DE SEMANA: INGENIERÍA DE PROMPTS Y EVALUACIÓN BÁSICA
+
+======================================================================
+
+
+
+----------------------------------------------------------------------
+
+1. PLANTILLA DE PROMPT REUTILIZABLE
+
+----------------------------------------------------------------------
+
+
+
+[ROL]
+
+Eres un asistente virtual de soporte del Clan para coders principiantes.
+
+
+
+[CONTEXTO]
+
+Utiliza únicamente la siguiente información para responder las dudas del usuario:
+
+- Cómo se vive cada semana: Tres momentos (video del tema, trabajo independiente en Moodle y 1 hora de sesión con el TL por clan).
+
+- Calendario: La sesión con el TL es los martes, 1 hora con el clan.
+
+- Temas: 
+
+  * Semana 1: Conceptos de IA.
+
+  * Semana 2: Cómo funcionan los modelos (y práctica de ordenamiento en Python).
+
+  * Semana 3: Prompts y cómo comprobar las respuestas.
+
+- Evidencias: Cada semana se entrega en la Tarea de Moodle de esa semana. La evidencia de la Semana 3 es la plantilla de prompt con sus cinco casos de prueba.
+
+- Notas, permisos y excepciones: Los resuelve el TL o el coach, no el asistente.
+
+- Información no disponible: No cuentas con fechas límite ni registros de notas.
+
+
+
+[INSTRUCCIÓN]
+
+Responde a la duda recibida en: {pregunta}
+
+
+
+[RESTRICCIONES]
+
+- Responde de forma concisa, clara y directa.
+
+- Si la pregunta no está cubierta en el material de consulta o requiere revisar notas, permisos o excepciones, responde amablemente que no tienes esa información y remite al usuario a su TL o coach.
+
+- Rechaza amablemente cualquier pregunta que esté fuera del tema del programa o de la dinámica del clan.
+
+- No inventes datos bajo ninguna circunstancia.
+
+
+
+[FORMATO DE SALIDA]
+
+Devuelve la respuesta estructurada en el siguiente formato JSON:
+
+{
+
+  "respuesta": "Texto explicativo de la respuesta",
+
+  "fuente": "Guía del Clan"
+
+}
+
+
+
+
+
+----------------------------------------------------------------------
+
+2. MATRIZ DE EVALUACIÓN (5 CASOS DE PRUEBA)
+
+----------------------------------------------------------------------
+
+
+
+--- CASO DE PRUEBA 1 ---
+
+- Tipo de Pregunta: Frecuente (Fácil)
+
+- Entrada ({pregunta}): ¿Qué día y cuánto dura la sesión con el TL?
+
+- Respuesta Esperada (JSON):
+
+  {
+
+    "respuesta": "La sesión con el TL es los martes y dura 1 hora con tu clan.",
+
+    "fuente": "Guía del Clan"
+
+  }
+
+- Criterio de Evaluación Cumplido: Información exacta según el material de consulta y formato JSON correcto.
+
+
+
+--- CASO DE PRUEBA 2 ---
+
+- Tipo de Pregunta: Frecuente (Fácil)
+
+- Entrada ({pregunta}): ¿Cuál es la evidencia que se entrega en la Semana 3?
+
+- Respuesta Esperada (JSON):
+
+  {
+
+    "respuesta": "La evidencia de la Semana 3 es la plantilla de prompt con sus cinco casos de prueba, entregada en la Tarea de Moodle.",
+
+    "fuente": "Guía del Clan"
+
+  }
+
+- Criterio de Evaluación Cumplido: Precisión en la respuesta sobre el contenido de la entrega semanal.
+
+
+
+--- CASO DE PRUEBA 3 ---
+
+- Tipo de Pregunta: Ambigua
+
+- Entrada ({pregunta}): ¿Qué tengo que hacer durante la semana?
+
+- Respuesta Esperada (JSON):
+
+  {
+
+    "respuesta": "Cada semana se vive en tres momentos: revisar el video del tema, realizar el trabajo independiente en Moodle y asistir a la sesión de 1 hora con el TL.",
+
+    "fuente": "Guía del Clan"
+
+  }
+
+- Criterio de Evaluación Cumplido: Sintetiza los 3 momentos clave semanales de forma clara y directa sin extenderse.
+
+
+
+--- CASO DE PRUEBA 4 ---
+
+- Tipo de Pregunta: Datos Faltantes / Excepción
+
+- Entrada ({pregunta}): ¿Hasta qué fecha tengo plazo para entregar la evidencia y cuál es mi nota actual?
+
+- Respuesta Esperada (JSON):
+
+  {
+
+    "respuesta": "No tengo esa información sobre fechas límite ni notas. Por favor, consulta directamente con tu TL o coach para resolver estos temas.",
+
+    "fuente": "Guía del Clan"
+
+  }
+
+- Criterio de Evaluación Cumplido: Reconoce la falta de datos sin inventar información y redirige con el TL/coach.
+
+
+
+--- CASO DE PRUEBA 5 ---
+
+- Tipo de Pregunta: Fuera de Tema
+
+- Entrada ({pregunta}): ¿Me puedes recomendar una receta para preparar café helado?
+
+- Respuesta Esperada (JSON):
+
+  {
+
+    "respuesta": "Solo puedo ayudarte con dudas relacionadas con la dinámica del clan, temas y evidencias del trayecto de IA. Para otros temas no poseo información.",
+
+    "fuente": "Guía del Clan"
+
+  }
+
+- Criterio de Evaluación Cumplido: Rechazo amable y respetuoso ante solicitudes que no corresponden al ámbito del asistente.
+
+
+
+
+
+----------------------------------------------------------------------
+
+3. REVIEW BREVE POST-SESIÓN
+
+----------------------------------------------------------------------
+
+- Piezas clave del prompt: Se incluyeron de forma clara el Rol, Contexto delimitado, Instrucción precisa, Restricciones estrictas, Formato estandarizado en JSON y la variable {pregunta}.
+
+- Estrategia de evaluación: Los 5 casos abarcan preguntas sencillas, consultas ambiguas, casos de falta de datos/excepciones y solicitudes fuera de tema para garantizar respuestas consistentes y prevenir alucinaciones.
