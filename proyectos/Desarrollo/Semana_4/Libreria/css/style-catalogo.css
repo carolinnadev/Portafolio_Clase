@@ -1,0 +1,12 @@
+/*boton pill inicio*/
+.fondos-btn {
+    display: inline-block;
+    width: max-content;
+    border-radius: 35%;
+    padding: 13px 24px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #E6ECFA;
+    color: #1E293B;
+    font-family: sans-serif;
+}

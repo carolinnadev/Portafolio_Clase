@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semáforo Interactivo</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">🚦 Semáforo Interactivo</h1>
+                <p class="card-subtitle">Presiona un botón para cambiar el estado de la luz.</p>
+
+                <div class="traffic-body" aria-label="Luces del semáforo">
+                    <div id="luzRoja" class="light light-red" aria-label="Luz roja"></div>
+                    <div id="luzAmarilla" class="light light-yellow" aria-label="Luz amarilla"></div>
+                    <div id="luzVerde" class="light light-green" aria-label="Luz verde"></div>
+                </div>
+
+                <p id="mensajeEstado" class="status-message" aria-live="polite">Selecciona una luz para comenzar</p>
+
+                <div class="controls">
+                    <button type="button" id="btnRojo" class="ctrl-btn btn-red">Rojo</button>
+                    <button type="button" id="btnAmarillo" class="ctrl-btn btn-yellow">Amarillo</button>
+                    <button type="button" id="btnVerde" class="ctrl-btn btn-green">Verde</button>
+                </div>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

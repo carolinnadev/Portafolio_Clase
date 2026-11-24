@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Productos</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">🛒 Lista de Productos</h1>
+                <p class="card-subtitle">Escribe un producto y presiona Agregar para sumarlo a la lista.</p>
+
+                <form id="formularioProducto" class="product-form" novalidate>
+                    <div class="input-row">
+                        <label for="productoInput" class="sr-only">Nombre del producto</label>
+                        <input
+                            type="text"
+                            id="productoInput"
+                            class="product-input"
+                            placeholder="Ej. Pan"
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="agregarBtn" class="add-btn">Agregar</button>
+                    </div>
+                    <p id="mensajeAviso" class="alert-message" aria-live="polite"></p>
+                </form>
+
+                <div class="list-box">
+                    <span class="list-label">Productos agregados</span>
+                    <ul id="listaProductos" class="product-list"></ul>
+                </div>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

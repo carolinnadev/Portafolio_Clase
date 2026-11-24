@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nueva Tarea con Enter</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">⌨️ Registro de Tarea</h1>
+                <p class="card-subtitle">Escribe y presiona <strong>Enter</strong> para mostrarla.</p>
+
+                <div class="input-group">
+                    <label for="tareaInput" class="input-label">Tarea</label>
+                    <input
+                        type="text"
+                        id="tareaInput"
+                        class="task-input"
+                        placeholder="Escribe una tarea"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div id="resultadoArea" class="result-box" aria-live="polite">
+                    <span class="result-placeholder">Aquí aparecerá tu nueva tarea...</span>
+                </div>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

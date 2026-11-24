@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galería de Imágenes con Miniaturas</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">🖼️ Galería Interactiva</h1>
+                <p class="card-subtitle">Haz clic en una miniatura para cambiar la vista principal.</p>
+
+                <figure class="viewer">
+                    <div class="viewer-frame">
+                        <img id="imagenPrincipal" class="main-image" src="" alt="">
+                    </div>
+                    <figcaption id="tituloImagen" class="image-title"></figcaption>
+                </figure>
+
+                <div id="contenedorMiniaturas" class="thumbnails-grid" role="group" aria-label="Miniaturas de imágenes"></div>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card: #181a26;
+    --bg_input: #111219;
+    --text_light: #f0f0f5;
+    --text_muted: #8a8d9f;
+    --accent_neon: #e822fe;
+    --accent_hover: #d018e2;
+    --accent_success: #5cffb1;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_input: #2a2d3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.card {
+    background-color: var(--bg_card);
+    padding: 2.25rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    border: 1px solid var(--border_subtle);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent_neon);
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text_muted);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text_light);
+}
+
+.task-input {
+    width: 100%;
+    background-color: var(--bg_input);
+    color: var(--text_light);
+    border: 1px solid var(--border_input);
+    border-radius: 8px;
+    padding: 0.8rem 0.9rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.task-input:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+.result-box {
+    background-color: var(--bg_input);
+    border: 1px dashed var(--border_input);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.result-placeholder {
+    color: var(--text_muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.task-message {
+    color: var(--text_light);
+    font-size: 1rem;
+    word-break: break-word;
+    line-height: 1.45;
+}
+
+.task-prefix {
+    color: var(--accent_success);
+    font-weight: 600;
+}

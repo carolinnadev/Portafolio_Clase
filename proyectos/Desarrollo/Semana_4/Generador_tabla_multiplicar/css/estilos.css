@@ -1,0 +1,169 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card: #181a26;
+    --bg_input: #111219;
+    --bg_table_header: #1b1d2e;
+    --text_light: #f0f0f5;
+    --text_muted: #8a8d9f;
+    --accent_neon: #e822fe;
+    --accent_hover: #d018e2;
+    --accent_error: #ff5c5c;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_box: #2a2d3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 460px;
+}
+
+.card {
+    background-color: var(--bg_card);
+    border: 1px solid var(--border_subtle);
+    border-radius: 16px;
+    padding: 2.25rem 1.85rem;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent_neon);
+    text-align: center;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text_muted);
+    text-align: center;
+    margin-top: -0.6rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.input-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.field-input {
+    flex: 1;
+    background-color: var(--bg_input);
+    color: var(--text_light);
+    border: 1px solid var(--border_box);
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.96rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field-input:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+.action-btn {
+    background-color: var(--accent_neon);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, transform 0.12s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--accent_hover);
+}
+
+.action-btn:active {
+    transform: scale(0.97);
+}
+
+.status-note {
+    min-height: 1.15rem;
+    font-size: 0.85rem;
+    color: var(--accent_error);
+    font-weight: 500;
+    text-align: center;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.multiplication-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg_input);
+    border: 1px solid var(--border_box);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.multiplication-table th {
+    background-color: var(--bg_table_header);
+    color: var(--accent_neon);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.75rem;
+    border-bottom: 2px solid var(--border_subtle);
+}
+
+.multiplication-table td {
+    padding: 0.65rem 0.75rem;
+    text-align: center;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border_box);
+}
+
+.multiplication-table tr:last-child td {
+    border-bottom: none;
+}
+
+.multiplication-table tr:hover {
+    background-color: rgba(232, 34, 254, 0.05);
+}
+
+.col-operation {
+    color: var(--text_light);
+}
+
+.col-result {
+    color: var(--accent_neon);
+    font-weight: 700;
+}

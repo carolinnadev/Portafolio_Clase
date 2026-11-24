@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pista de Longitud de Contraseña</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">🔐 Nivel de Contraseña</h1>
+                <p class="card-subtitle">Escribe una contraseña para ver su nivel en tiempo real.</p>
+
+                <div class="input-group">
+                    <label for="passwordInput" class="input-label">Contraseña</label>
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        class="password-input"
+                        placeholder="Escribe tu contraseña..."
+                        autocomplete="new-password"
+                    >
+                </div>
+
+                <p id="pistaPassword" class="hint-text hint-neutral" aria-live="polite">
+                    Esperando contraseña...
+                </p>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

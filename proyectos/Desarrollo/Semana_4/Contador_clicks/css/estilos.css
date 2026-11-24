@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #0f1016;
+    color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: #181a26;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.15);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(232, 34, 254, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #e822fe;
+}
+
+.counter-display {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+/* Colores de estado con sus efectos neón */
+.counter-display.verde {
+    color: #5cffb1;
+    text-shadow: 0 0 15px rgba(92, 255, 177, 0.4);
+}
+
+.counter-display.amarillo {
+    color: #fbbf24;
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+}
+
+.counter-display.rojo {
+    color: #ef4444;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.estado-alerta {
+    font-size: 0.85rem;
+    color: #8a8d9f;
+    margin-bottom: 1.5rem;
+    min-height: 1.2rem;
+    font-weight: 500;
+}
+
+.btn-container {
+    display: flex;
+    gap: 0.75rem;
+}
+
+button {
+    flex: 1;
+    background: #e822fe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, opacity 0.3s;
+}
+
+button:hover {
+    background: #d018e2;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background: #2a2d3d;
+    color: #6b7280;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-secondary {
+    background: #2a2d3d;
+}
+
+.btn-secondary:hover {
+    background: #383c52;
+}

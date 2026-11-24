@@ -1,0 +1,149 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card_default: #181a26;
+    --bg_control: #111219;
+    --text_light: #f0f0f5;
+    --text_muted: #a0a4b8;
+    --text_dark: #111219;
+    --accent_neon: #e822fe;
+    --accent_hover: #d018e2;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_input: #2a2d3d;
+
+    --color_azul: #1d4ed8;
+    --color_verde: #047857;
+    --color_amarillo: #facc15;
+    --color_rosa: #f472b6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.card {
+    background-color: var(--bg_card_default);
+    padding: 2.25rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    border: 1px solid var(--border_subtle);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.85rem;
+    color: var(--accent_neon);
+    transition: color 0.25s ease;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text_muted);
+    margin-bottom: 1.5rem;
+    transition: color 0.25s ease;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text_light);
+    transition: color 0.25s ease;
+}
+
+.color-select {
+    width: 100%;
+    background-color: var(--bg_control);
+    color: var(--text_light);
+    border: 1px solid var(--border_input);
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.color-select:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+/* Estados de color de fondo */
+.card.tema-azul {
+    background-color: var(--color_azul);
+    border-color: #60a5fa;
+    box-shadow: 0 8px 28px rgba(29, 78, 216, 0.35);
+}
+
+.card.tema-azul .card-title {
+    color: #ffffff;
+}
+
+.card.tema-azul .card-text,
+.card.tema-azul .control-label {
+    color: #dbeafe;
+}
+
+.card.tema-verde {
+    background-color: var(--color_verde);
+    border-color: #34d399;
+    box-shadow: 0 8px 28px rgba(4, 120, 87, 0.35);
+}
+
+.card.tema-verde .card-title {
+    color: #ffffff;
+}
+
+.card.tema-verde .card-text,
+.card.tema-verde .control-label {
+    color: #d1fae5;
+}
+
+.card.tema-amarillo {
+    background-color: var(--color_amarillo);
+    border-color: #fde047;
+    box-shadow: 0 8px 28px rgba(250, 204, 21, 0.28);
+}
+
+.card.tema-amarillo .card-title,
+.card.tema-amarillo .card-text,
+.card.tema-amarillo .control-label {
+    color: var(--text_dark);
+}
+
+.card.tema-rosa {
+    background-color: var(--color_rosa);
+    border-color: #f9a8d4;
+    box-shadow: 0 8px 28px rgba(244, 114, 182, 0.3);
+}
+
+.card.tema-rosa .card-title,
+.card.tema-rosa .card-text,
+.card.tema-rosa .control-label {
+    color: var(--text_dark);
+}

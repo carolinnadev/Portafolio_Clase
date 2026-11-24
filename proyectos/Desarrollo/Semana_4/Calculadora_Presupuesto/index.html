@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Presupuesto</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">💰 Calculadora de Presupuesto</h1>
+                <p class="card-subtitle">Define tu presupuesto inicial y registra tus gastos en tiempo real.</p>
+
+                <div class="field">
+                    <label for="presupuestoInput" class="field-label">Presupuesto inicial</label>
+                    <input
+                        type="number"
+                        id="presupuestoInput"
+                        class="field-input"
+                        placeholder="Ej. 50000"
+                        min="0"
+                        step="any"
+                    >
+                </div>
+
+                <form id="gastoForm" class="expense-form" novalidate>
+                    <div class="expense-grid">
+                        <div class="field">
+                            <label for="nombreGastoInput" class="field-label">Nombre del gasto</label>
+                            <input
+                                type="text"
+                                id="nombreGastoInput"
+                                class="field-input"
+                                placeholder="Ej. Transporte"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="valorGastoInput" class="field-label">Valor del gasto</label>
+                            <input
+                                type="number"
+                                id="valorGastoInput"
+                                class="field-input"
+                                placeholder="Ej. 5000"
+                                min="0"
+                                step="any"
+                            >
+                        </div>
+                    </div>
+
+                    <button type="submit" id="agregarGastoBtn" class="action-btn">Agregar gasto</button>
+                </form>
+
+                <p id="mensajeAviso" class="status-note" aria-live="polite"></p>
+
+                <section class="summary-box" aria-label="Resumen de presupuesto">
+                    <div class="summary-item">
+                        <span class="summary-label">Presupuesto inicial</span>
+                        <strong id="resumenInicial" class="summary-value">$0.00</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Total gastado</span>
+                        <strong id="resumenGastado" class="summary-value gastado">$0.00</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Dinero restante</span>
+                        <strong id="resumenRestante" class="summary-value restante">$0.00</strong>
+                    </div>
+                    <p id="alertaPresupuesto" class="budget-alert" aria-live="polite"></p>
+                </section>
+
+                <section class="expenses-section" aria-label="Lista de gastos">
+                    <h2 class="section-heading">Gastos registrados</h2>
+                    <ul id="listaGastos" class="expense-list"></ul>
+                    <p id="listaVacia" class="empty-note">Aún no has registrado ningún gasto.</p>
+                </section>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambiador de Color</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <article id="tarjetaColor" class="card">
+                <h1 id="tituloTarjeta" class="card-title">🎨 Cambiador de Color</h1>
+                <p id="textoTarjeta" class="card-text">
+                    Selecciona un color de la lista para actualizar el fondo de esta tarjeta al instante sin alterar su contenido.
+                </p>
+                <div class="control-group">
+                    <label for="selectorColor" class="control-label">Elige un color</label>
+                    <select id="selectorColor" class="color-select">
+                        <option value="">Por defecto (Oscuro)</option>
+                        <option value="azul">Azul</option>
+                        <option value="verde">Verde</option>
+                        <option value="amarillo">Amarillo</option>
+                        <option value="rosa">Rosa</option>
+                    </select>
+                </div>
+            </article>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

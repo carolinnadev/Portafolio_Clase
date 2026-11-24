@@ -1,0 +1,113 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card: #181a26;
+    --bg_input: #111219;
+    --text_light: #f0f0f5;
+    --text_muted: #8a8d9f;
+    --accent_neon: #e822fe;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_input: #2a2d3d;
+
+    --color_corta: #ff5c5c;
+    --color_aceptable: #fbbf24;
+    --color_fuerte: #5cffb1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 440px;
+}
+
+.card {
+    background-color: var(--bg_card);
+    padding: 2.25rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    border: 1px solid var(--border_subtle);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent_neon);
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text_muted);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 0.85rem;
+}
+
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text_light);
+}
+
+.password-input {
+    width: 100%;
+    background-color: var(--bg_input);
+    color: var(--text_light);
+    border: 1px solid var(--border_input);
+    border-radius: 8px;
+    padding: 0.8rem 0.9rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.password-input:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+.hint-text {
+    font-size: 0.92rem;
+    font-weight: 600;
+    min-height: 1.35rem;
+    transition: color 0.2s ease;
+}
+
+.hint-neutral {
+    color: var(--text_muted);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.hint-corta {
+    color: var(--color_corta);
+}
+
+.hint-aceptable {
+    color: var(--color_aceptable);
+}
+
+.hint-fuerte {
+    color: var(--color_fuerte);
+}

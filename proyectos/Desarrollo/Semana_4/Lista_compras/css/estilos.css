@@ -1,0 +1,180 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card: #181a26;
+    --bg_input: #111219;
+    --bg_item: #202334;
+    --text_light: #f0f0f5;
+    --text_muted: #8a8d9f;
+    --accent_neon: #e822fe;
+    --accent_hover: #d018e2;
+    --accent_success: #5cffb1;
+    --accent_error: #ff5c5c;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_input: #2a2d3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 460px;
+}
+
+.card {
+    background-color: var(--bg_card);
+    padding: 2.25rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    border: 1px solid var(--border_subtle);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent_neon);
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text_muted);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.product-form {
+    margin-bottom: 1.35rem;
+}
+
+.input-row {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.product-input {
+    flex: 1;
+    background-color: var(--bg_input);
+    color: var(--text_light);
+    border: 1px solid var(--border_input);
+    border-radius: 8px;
+    padding: 0.78rem 0.9rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-input:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+.add-btn {
+    background-color: var(--accent_neon);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.add-btn:hover {
+    background-color: var(--accent_hover);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+.alert-message {
+    min-height: 1.3rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--accent_error);
+    font-weight: 500;
+}
+
+.list-box {
+    background-color: var(--bg_input);
+    border: 1px dashed var(--border_input);
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 5rem;
+}
+
+.list-label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text_muted);
+    margin-bottom: 0.7rem;
+}
+
+.product-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-item {
+    background-color: var(--bg_item);
+    border-left: 3px solid var(--accent_neon);
+    border-radius: 6px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.98rem;
+    color: var(--text_light);
+    word-break: break-word;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-text::before {
+    content: "• ";
+    color: var(--accent_success);
+    font-weight: 700;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent_error);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    line-height: 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 92, 92, 0.15);
+}

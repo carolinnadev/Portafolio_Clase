@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestor de Tareas con Estado</title>
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <section class="card">
+                <h1 class="card-title">✅ Gestor de Tareas</h1>
+                <p class="card-subtitle">Registra tareas, asigna prioridad y controla su estado.</p>
+
+                <form id="tareaForm" class="task-form" novalidate>
+                    <div class="form-row">
+                        <div class="field grow">
+                            <label for="tareaInput" class="field-label">Tarea</label>
+                            <input
+                                type="text"
+                                id="tareaInput"
+                                class="field-input"
+                                placeholder="Ej. Revisar documentación"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="prioridadSelect" class="field-label">Prioridad</label>
+                            <select id="prioridadSelect" class="field-select">
+                                <option value="baja">Baja</option>
+                                <option value="media" selected>Media</option>
+                                <option value="alta">Alta</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="agregarTareaBtn" class="action-btn">Agregar tarea</button>
+                </form>
+
+                <p id="mensajeAviso" class="status-note" aria-live="polite"></p>
+
+                <div class="toolbar">
+                    <p class="counter-box">
+                        Pendientes: <strong id="contadorPendientes" class="counter-number">0</strong>
+                    </p>
+
+                    <div class="filter-group" role="group" aria-label="Filtrar tareas por estado">
+                        <button type="button" class="filter-btn activa" data-filtro="todas">Todas</button>
+                        <button type="button" class="filter-btn" data-filtro="pendientes">Pendientes</button>
+                        <button type="button" class="filter-btn" data-filtro="completadas">Completadas</button>
+                    </div>
+                </div>
+
+                <p id="mensajeHover" class="hover-banner" aria-live="polite">
+                    Pasa el cursor sobre una tarea para ver su detalle.
+                </p>
+
+                <ul id="listaTareas" class="task-list"></ul>
+                <p id="listaVacia" class="empty-note">No hay tareas para mostrar en este filtro.</p>
+            </section>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

@@ -420,43 +420,37 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('visibilitychange', startSnake);
   }
 
-// Proyectos Team Lead
-const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
-const btnText = document.getElementById('btnText');
-const sectionTeamLead = document.getElementById('proyectos_team_lead');
+  // Proyectos: cada sección controla únicamente sus propias tarjetas y su propio botón.
+  // Las demás secciones del portafolio conservan su funcionamiento independiente.
+  document.querySelectorAll('.projects-section').forEach(projectSection => {
+    const projectsGrid = projectSection.querySelector('.projects-grid');
+    const toggleProjectsBtn = projectSection.querySelector('.see-all-btn');
+    const btnText = toggleProjectsBtn?.querySelector('span');
 
-if (toggleProjectsBtn && btnText && sectionTeamLead) {
-  // Selecciona solo los proyectos extra de ESTA sección
-  const extraProjects = sectionTeamLead.querySelectorAll('.extra-project');
+    if (!projectsGrid || !toggleProjectsBtn || !btnText) return;
 
-  toggleProjectsBtn.addEventListener('click', () => {
-    const isExpanded = toggleProjectsBtn.getAttribute('aria-expanded') !== 'true';
-    toggleProjectsBtn.setAttribute('aria-expanded', String(isExpanded));
-    extraProjects.forEach(project => project.classList.toggle('hidden', !isExpanded));
-    btnText.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
-  });
-}
+    const projectCards = projectsGrid.querySelectorAll('.project-card');
+    const visibleProjects = 4;
+    let isExpanded = false;
 
-
-// Proyectos IA
-const sectionIA = document.getElementById('proyectos_ia');
-
-if (sectionIA) {
-  const toggleProjectsBtnIA = sectionIA.querySelector('#toggleProjectsBtn');
-  const btnTextIA = sectionIA.querySelector('#btnText');
-  const extraProjects = sectionIA.querySelectorAll('.extra-project');
-
-  if (toggleProjectsBtnIA && btnTextIA) {
-    toggleProjectsBtnIA.addEventListener('click', () => {
-      const isExpanded = toggleProjectsBtnIA.getAttribute('aria-expanded') !== 'true';
-      toggleProjectsBtnIA.setAttribute('aria-expanded', String(isExpanded));
-      extraProjects.forEach(project => project.classList.toggle('hidden', !isExpanded));
-      btnTextIA.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
+    // Muestra las primeras cuatro tarjetas y oculta todas las siguientes.
+    projectCards.forEach((project, index) => {
+      project.classList.toggle('hidden', index >= visibleProjects);
     });
-  }
-}
 
-  
+    toggleProjectsBtn.setAttribute('aria-expanded', 'false');
+
+    toggleProjectsBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+
+      projectCards.forEach((project, index) => {
+        project.classList.toggle('hidden', !isExpanded && index >= visibleProjects);
+      });
+
+      toggleProjectsBtn.setAttribute('aria-expanded', String(isExpanded));
+      btnText.textContent = isExpanded ? 'Ver menos proyectos' : 'Ver todos los proyectos';
+    });
+  });
 
   // Envía el formulario al backend del mismo origen; las credenciales SMTP nunca salen del servidor.
   const contactForm = document.getElementById('contactForm');

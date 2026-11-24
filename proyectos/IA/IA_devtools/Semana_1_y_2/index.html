@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asistente de Conocimiento · UX & IA</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+
+        <main class="chat-card">
+            <!-- Header con indicador de estado y salida humana -->
+            <header class="chat-header">
+                <h1><span class="status-dot"></span> Asistente de Conocimiento</h1>
+                <a href="#soporte" class="btn-coach" onclick="alert('Derivando a un tutor humano...'); return false;">💬 Hablar con un coach</a>
+            </header>
+
+            <!-- Área de Mensajes (4 Estados de Interfaz) -->
+            <section class="chat-body" id="chatBody">
+                <!-- Estado 1: Vacío / Bienvenida con sugerencias -->
+                <article class="message bot">
+                    <span class="message-tag tag-m">Modelo M</span><br>
+                    Hola, Caro. Escribe tu duda conceptual sobre el video o los retos de hoy. 
+                    <div class="empty-suggestions">
+                        <p>Prueba preguntar: <em>"¿Qué es la programación por reglas?"</em> o <em>"¿Cuándo es la entrega?"</em></p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Aviso de Límites y Transparencia -->
+            <aside class="limit-banner">
+                <strong>Aviso de IA:</strong> Este modelo puede cometer errores. No resuelve exámenes ni modifica notas registradas.
+            </aside>
+
+            <!-- Footer / Input de Consulta -->
+            <form class="chat-footer" id="chatForm">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    class="chat-input" 
+                    placeholder="Ej: ¿Qué es el aprendizaje de ejemplos?" 
+                    autocomplete="off" 
+                />
+                <button type="submit" class="send-btn">Enviar</button>
+            </form>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

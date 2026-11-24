@@ -197,3 +197,6 @@ Devuelve la respuesta estructurada en el siguiente formato JSON:
 - Piezas clave del prompt: Se incluyeron de forma clara el Rol, Contexto delimitado, Instrucción precisa, Restricciones estrictas, Formato estandarizado en JSON y la variable {pregunta}.
 
 - Estrategia de evaluación: Los 5 casos abarcan preguntas sencillas, consultas ambiguas, casos de falta de datos/excepciones y solicitudes fuera de tema para garantizar respuestas consistentes y prevenir alucinaciones.
+
+
+link de github: https://github.com/carolinnadev/project-Barra_Facil.git

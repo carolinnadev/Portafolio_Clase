@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioWeb - Landing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-vh-100 d-flex flex-column m-0 p-0">
+    <header class="navbar navbar-expand-lg navbar-custom shadow-sm px-4">
+        <section class="container-fluid p-0">
+            <section class="d-flex align-items-center gap-3">
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold brand-logo m-0" href="#">
+                    <!-- SVG Icono del Libro con fondo cuadrado azul y bordes redondeados -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                        class="logo-book-svg">
+                        <rect width="36" height="36" rx="8" fill="#022448" />
+                        <g transform="translate(10, 10)" fill="#845400">
+                            <path
+                                d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                        </g>
+                    </svg>
+                    <span class="d-inline-flex"><span class="logo-biblio">Biblio</span><span
+                            class="logo-web">Web</span></span>
+                </a>
+                <ul class="navbar-nav d-flex flex-row gap-2 mb-0">
+                    <li class="nav-item"><a class="nav-link nav-link-custom activa px-2" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link nav-link-custom px-2"
+                            href="paginas/catalogo.html">Catálogo</a></li>
+                    <li id="btn-login" class="nav-item"><a class="nav-link nav-link-custom px-2"
+                            href="paginas/login.html">Acceso
+                            Administrador</a></li>
+                </ul>
+            </section>
+
+            <section class="d-flex align-items-center gap-3 ms-auto">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">
+                    <!-- Icono Sol -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+
+                    <!-- Indicador circular activo -->
+                    <div class="toggle-circle">
+                        <!-- Icono Luna -->
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                </button>
+            </section>
+        </section>
+    </header>
+
+    <main class="flex-1">
+
+        <section class="container-fluid p-0">
+            <div id="miCarrusel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="img/carrusel_2.png" class="slide-img" alt="Estanterías de una biblioteca">
+
+                        <div class="slide-overlay">
+                            <span class="badge rounded-pill bg-warning-subtle text-warning"> <i class="bi bi-book"></i>
+                                Fondo
+                                Bibliográfico Abierto</span>
+                            <h2>Más de 45.000 títulos a tu disposición</h2>
+                            <p>Narrativa clásica, novedades editoriales, revistas especializadas y recursos
+                                digitales
+                                interactivos listos para préstamos presencial o virtual</p>
+                            <a href="#" class="btn btn-warning">Ver colección <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/carrusel_1.png" class="slide-img"
+                            alt="Estanterías de una biblioteca y una mesa con personas trabajando">
+
+                        <div class="slide-overlay">
+                            <span class="badge rounded-pill bg-warning-subtle text-warning"> <i
+                                    class="bi bi-laptop"></i> Espacios de
+                                Estudio y Trabajo</span>
+                            <h2>Zona de estudio y conexión de alta velocidad</h2>
+                            <p>Puestos ergonómicos equipados con conectividad Wi-Fi 6, puertos de carga y salas
+                                insonorizadas diseñadas para la máxima concentración</p>
+                            <a href="#" class="btn btn-warning">Conoce nuestros Horarios <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/carrusel_3.png" class="slide-img"
+                            alt="Estanterías de una biblioteca y una mesas con personas trabajando">
+
+                        <div class="slide-overlay">
+                            <span class="badge rounded-pill bg-warning-subtle text-warning"><i
+                                    class="bi bi-people-fill"></i>
+                                Actividades
+                                para compartir y conocer</span>
+                            <h2>Talleres de lectura disponibles</h2>
+                            <p>Talleres de lectura en diferentes días de la semana para que puedas compartir y
+                                expemimentar la lectura con los demás.</p>
+                            <a href="#" class="btn btn-warning">Insciribirse <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev"
+                    aria-label="Anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next"
+                    aria-label="Siguiente">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+        </section>
+
+        <section class="container-lg">
+            <div class="row mt-5 mb-3 py-3">
+                <div
+                    class="col-12 d-flex flex-column text-center align-items-center justify-content-center servicios-header">
+                    <div>
+                        <span class="badge rounded-pill bg-warning-subtle text-warning"><i
+                                class="bi bi-people-fill"></i>
+                            BENEFICIOS MUNICIPALES</span>
+                    </div>
+                    <h2 class="mt-2 fw-bold">Nuestros Servicios</h2>
+                    <p>Comprimetidos con el libre acceso a la cultura, la educación continua y el desarrollo
+                        comunitario.</p>
+
+                </div>
+            </div>
+
+            <div class="row mb-5 pb-3 g-3">
+                <article class="col-6 col-md-3  servicio-card">
+                    <div class="border p-3 rounded h-100 d-flex flex-column justify-content-between">
+                        <div class="d-inline-flex bg-yellow text-warning align-items-center justify-content-center rounded-3"
+                            style="width: 40px; height: 40px;">
+                            <i class="bi bi-book"></i>
+                        </div>
+
+                        <h3 class="pt-2 fw-bold h5"> Préstamo de libros</h3>
+                        <p class="py-1 h6">Préstamo de fondos físicos y préstamos de libros electrnónicos durante 21
+                            días con opción a renovación en línea.</p>
+                        <span class="border-top small pt-2">21 días renovables <i class="bi bi-check-circle"></i></span>
+                    </div>
+                </article>
+
+                <article class="col-6 col-md-3  servicio-card">
+                    <div class="border p-3 rounded h-100 d-flex flex-column justify-content-between">
+                        <div class="d-inline-flex bg-blue align-items-center justify-content-center rounded-3"
+                            style="width: 40px; height: 40px;">
+                            <i class="bi bi-sun"></i>
+                        </div>
+
+                        <h3 class="pt-2 fw-bold h5"> Salas de estudio</h3>
+                        <p class="py-1 h6">Puestos individuales y compartidos insonorizados, tomas de corriente en cada
+                            mesa y luz natural.</p>
+                        <span class="border-top small pt-2">Zonas silenciosas <i class="bi bi-volume-mute"></i></span>
+                    </div>
+                </article>
+
+                <article class="col-6 col-md-3  servicio-card">
+                    <div class="border p-3 rounded h-100 d-flex flex-column justify-content-between">
+                        <div class="d-inline-flex bg-green text-success align-items-center justify-content-center rounded-3"
+                            style="width: 40px; height: 40px;">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+
+                        <h3 class="pt-2 fw-bold h5"> Internet gratuito</h3>
+                        <p class="py-1 h6">Red Wi-Fi 6 de alta velocidad en todas las salas y terminales informáticas de
+                            uso libre para consultas e investigación.</p>
+                        <span class="border-top pt-2 small text-success">Wi-fi de Alta velocidad <i
+                                class="bi bi-wifi"></i></span>
+                    </div>
+                </article>
+
+                <article class="col-6 col-md-3  servicio-card">
+                    <div class="border p-3 rounded h-100 d-flex flex-column justify-content-between">
+                        <div class="d-inline-flex bg-purple text-purple align-items-center justify-content-center rounded-3"
+                            style="width: 40px; height: 40px;">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <h3 class="pt-2 fw-bold h5"> Talleres de lectura</h3>
+                        <p class="py-1 h6">Clubes quincenales por temáticas, encuentros literarios con autores y
+                            talleres creativos abiertos a la ciudadania.</p>
+                        <span class="border-top pt-2 small text-purple">Acceso libre <i class="bi bi-people"></i></span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="container my-5">
+            <div class="card shadow-sm border rounded-4 overflow-hidden">
+
+                <div class="card-header bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="d-inline-flex bg-primary text-warning align-items-center justify-content-center rounded-3 p-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="bi bi-clock-history fs-3"></i>
+                            </div>
+
+                            <div>
+                                <h4 class="fw-bold mb-1">
+                                    Horarios de Atención
+                                </h4>
+                                <p class="text-secondary mb-0">
+                                    Planifica tu visita a las salas y servicios bibliotecarios
+                                </p>
+                            </div>
+                        </div>
+
+                        <span
+                            class="badge rounded-pill bg-success-subtle text-success border border-success-subtle px-3 py-2">
+                            <i class="bi bi-circle-fill me-1" style="font-size: 7px;"></i>
+                            Abierto hoy
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+                            <tr>
+                                <th class="py-3 px-4 text-uppercase small">
+                                    Día
+                                </th>
+                                <th class="py-3 px-4 text-uppercase small">
+                                    Horario de salas de lectura
+                                </th>
+                                <th class="py-3 px-4 text-uppercase small">
+                                    Horario de servicio de préstamos / mostrador
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td class="py-3 px-4">
+                                    <i class="bi bi-calendar-event text-warning me-2"></i>
+                                    <span class="fw-semibold">Lunes a Viernes</span>
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    08:30 - 20:30
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    09:00 - 20:00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="py-3 px-4">
+                                    <i class="bi bi-calendar-event text-warning me-2"></i>
+                                    <span class="fw-semibold">Sábados</span>
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    09:00 - 14:00
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    09:30 - 13:30
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="py-3 px-4">
+                                    <i class="bi bi-calendar-event text-danger me-2"></i>
+                                    <span class="fw-semibold text-danger">
+                                        Domingos y Festivos
+                                    </span>
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    Cerrado
+                                </td>
+
+                                <td class="py-3 px-4">
+                                    <span class="badge rounded-pill bg-secondary-subtle text-secondary px-3 py-2">
+                                        Atención virtual 24/7 disponible
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-footer bg-light p-4">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-geo-alt text-warning"></i>
+
+                            <span>
+                                <strong>Sede Central:</strong>
+                                <span class="text-secondary">
+                                    Av. de la Ilustración 42, 28014 Madrid
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-telephone text-warning"></i>
+
+                            <span>
+                                <strong>Teléfono de información:</strong>
+                                <span class="text-secondary">
+                                    +34 912 345 678
+                                </span>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container-lg mb-5">
+            <div class="row px-4">
+                <aside class="col-12 bg-primary p-4 rounded-4 shadow-sm">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white">
+                            <span class="badge small rounded-pill bg-warning-subtle text-warning"> <i
+                                    class="bi bi-book"></i> Fondo
+                                TU BIBLIOTECA DE PROXIMIDAD</span>
+                            <h2 class="fw-bold pt-2 h4"> Forma parte de la comunidad lectora de BiblioWeb</h2>
+                            <p>Accede de forma libre a miles de ejemplares, reservas de cabinas y a toda nuestra agenda
+                                cultural para todas las edades.</p>
+                        </div>
+                        <div class="d-flex flex-md-column flex-lg-row gap-3">
+                            <a class="btn btn-warning" href="paginas/catalogo.html"><i class="bi bi-search"></i>
+                                Explorar
+                                Catálogo</a>
+                            <a class="btn btn-outline-light" href="paginas/login.html"><i class="bi bi-shield-lock"></i>
+                                Acceso de Administrador</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-custom border-top py-5 mt-auto px-4">
+        <section class="container-fluid p-0">
+            <section class="row g-4">
+                <article class="col-md-4">
+                    <section class="fw-bold brand-logo mb-2 d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                            class="logo-book-svg">
+                            <rect width="36" height="36" rx="8" fill="#022448" />
+                            <g transform="translate(10, 10)" fill="#845400">
+                                <path
+                                    d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                            </g>
+                        </svg>
+                        <span class="d-inline-flex"><span class="logo-biblio">Biblio</span><span
+                                class="logo-web">Web</span></span>
+                    </section>
+                    <div class="d-inline-block text-start" style="max-width: 320px;">
+                        <p class="text-muted small mb-0">Plataforma institucional de gestión y consulta bibliográfica
+                            pública. Espacio abierto a la investigación, preservación y conocimiento cívico.</p>
+                    </div>
+                </article>
+
+                <article class="col-md-4 text-center">
+                    <h5 class="h6 fw-bold mb-3">Horarios de Atención</h5>
+                    <div class="d-inline-block text-start">
+                        <p class="text-muted small mb-1">Lunes a Viernes: 08:00 - 20:00 hrs</p>
+                        <p class="text-muted small mb-1">Sábados: 09:00 - 14:00 hrs</p>
+                        <p class="text-muted small mb-1">Domingos y Feriados: Cerrado</p>
+                        <p class="text-muted small mb-0">Préstamo interbibliotecario: Sala General</p>
+                    </div>
+                </article>
+
+                <article class="col-md-4 text-center">
+                    <h5 class="h6 fw-bold mb-3">Enlaces de Ayuda</h5>
+                    <div class="d-inline-block text-start">
+                        <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Guía del
+                                Usuario</a></p>
+                        <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Reglamento
+                                de Sala</a></p>
+                        <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Mesa de
+                                Ayuda</a></p>
+                        <p class="text-muted small mb-0"><a href="#" class="text-decoration-none text-muted">Portal de
+                                Personal</a></p>
+                    </div>
+                </article>
+            </section>
+
+            <section
+                class="border-top pt-4 mt-4 d-flex justify-content-between flex-column flex-md-row text-muted small">
+                <p class="mb-0">&copy; 2024 Red de Bibliotecas Públicas BiblioWeb. Todos los derechos reservados.</p>
+                <p class="mb-0">Sistema Integrado de Gestión Bibliotecaria</p>
+            </section>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

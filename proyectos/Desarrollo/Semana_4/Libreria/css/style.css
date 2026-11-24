@@ -1,0 +1,798 @@
+:root {
+    --surface: #f8f9ff;
+    --surface-dim: #cbdbf5;
+    --surface-bright: #f8f9ff;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #eff4ff;
+    --surface-container: #e5eeff;
+    --surface-container-high: #dce9ff;
+    --surface-container-highest: #d3e4fe;
+    --on-surface: #0b1c30;
+    --on-surface-variant: #43474e;
+    --inverse-surface: #213145;
+    --inverse-on-surface: #eaf1ff;
+    --outline: #74777f;
+    --outline-variant: #c4c6cf;
+    --surface-tint: #455f87;
+    --primary: #022448;
+    --on-primary: #ffffff;
+    --primary-container: #1e3a5f;
+    --on-primary-container: #8aa4cf;
+    --inverse-primary: #adc8f5;
+    --secondary: #845400;
+    --on-secondary: #ffffff;
+    --secondary-container: #ffb54d;
+    --on-secondary-container: #714800;
+    --tertiary: #002a1e;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #004232;
+    --on-tertiary-container: #59b395;
+    --error: #ba1a1a;
+    --on-error: #ffffff;
+    --error-container: #ffdad6;
+    --on-error-container: #93000a;
+    --background: #f8f9ff;
+    --on-background: #0b1c30;
+    --surface-variant: #d3e4fe;
+    --bg-yellow: #FEF3C7;
+    --bg-blue: #E0F2FE;
+    --bg-green: #D1FAE5;
+    --bg-purple: #E0E7FF;
+    --font-purple: #5044E6;
+    --bs-navbar-active-color: var(--on-primary);
+}
+
+/* ==========================================
+   ESTILOS GENERALES Y COMPONENTES (MODO CLARO)
+   ================================---------- */
+
+.body-custom,
+body {
+    background-color: var(--background);
+    color: var(--on-background);
+}
+
+.navbar-custom,
+.footer-custom {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.navbar-custom {
+    background-color: var(--surface-container-lowest);
+    border-bottom: 1px solid var(--outline-variant);
+}
+
+.brand-logo {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.brand-logo:hover {
+    color: var(--primary-container);
+}
+
+.logo-biblio {
+    color: var(--primary);
+}
+
+.logo-web {
+    color: var(--secondary);
+}
+
+.nav-link-custom {
+    color: var(--on-background);
+}
+
+.nav-link-custom.activa,
+.nav-link-custom:hover {
+    color: var(--on-primary);
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.card-custom {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7)), url('../img/biblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #022448;
+}
+
+.card-custom .card-title {
+    color: var(--on-surface);
+}
+
+.card-custom .card-title+p,
+.card-custom .text-secondary {
+    color: #2a2c2e !important;
+    font-weight: 500;
+}
+
+.card-custom .text-muted {
+    color: #30353a !important;
+    font-weight: 500;
+}
+
+.card-lock-icon {
+    color: var(--primary);
+}
+
+.card-float-container {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.card-float-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.alert-custom-error {
+    background-color: var(--error-container);
+    color: var(--on-error-container);
+    border: 1px solid var(--error);
+}
+
+.btn-custom-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--primary-container);
+    color: var(--on-primary);
+}
+
+.btn-profile-icon {
+    border-color: var(--outline-variant);
+    color: var(--on-surface-variant);
+}
+
+.btn-profile-icon:hover {
+    background-color: var(--surface-container);
+    color: var(--primary);
+}
+
+.btn-admin-access {
+    background-color: var(--primary-container) !important;
+    color: var(--on-primary) !important;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-admin-access:hover {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+}
+
+.info-box-custom {
+    background-color: var(--surface-container-low);
+    border: 1px solid var(--outline-variant);
+}
+
+.input-group-text-custom {
+    background-color: var(--surface-container);
+    border-color: var(--outline-variant);
+    color: var(--on-surface-variant);
+}
+
+.form-control-custom {
+    border-color: var(--outline-variant);
+    color: var(--on-surface);
+}
+
+.form-control-custom:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(2, 36, 72, 0.25);
+}
+
+.forgot-link,
+.back-link {
+    color: var(--primary);
+}
+
+.forgot-link:hover,
+.back-link:hover {
+    color: var(--primary-container);
+    text-decoration: underline !important;
+}
+
+.theme-toggle-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Mantiene distribuidos los iconos de sol y luna */
+    width: 50px;
+    /* Ajusta según el ancho total que prefieras para el switch */
+    height: 28px;
+    padding: 2px 4px;
+    background: var(--surface-container);
+    border: 1px solid var(--outline-variant);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sun-icon,
+.moon-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.toggle-circle {
+    position: absolute;
+    left: 4px;
+    /* Posición inicial en modo claro */
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    color: var(--on-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    /* Transición suave opcional */
+}
+
+.footer-custom {
+    background-color: var(--surface-container-lowest);
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.footer-custom .row {
+    row-gap: 1.5rem;
+}
+
+.footer-custom p,
+.footer-custom li {
+    font-size: 0.870rem;
+}
+
+.password-toggle-icon {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.password-toggle-icon.visible {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* ==========================================
+   ESTILOS CAROUSEL
+   ================================---------- */
+
+.carousel-item {
+    height: 460px;
+    position: relative;
+    background: #222;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 6rem;
+    color: white;
+}
+
+.slide-overlay h2 {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.slide-overlay p {
+    max-width: 550px;
+}
+
+/* ==========================================
+   ESTILOS SERVICIOS - LANDING
+   ================================---------- */
+
+
+.servicios-header h2,
+.servicio-card h3 {
+    color: var(--primary);
+}
+
+.servicios-header p,
+.servicio-card p {
+    color: var(--on-surface-variant);
+}
+
+.servicio-card>div {
+    background-color: var(--on-primary);
+}
+
+.bg-yellow {
+    background-color: var(--bg-yellow);
+}
+
+.bg-blue {
+    background-color: var(--bg-blue);
+}
+
+.bg-green {
+    background-color: var(--bg-green);
+}
+
+.bg-purple {
+    background-color: var(--bg-purple);
+}
+
+.text-purple {
+    color: var(--font-purple);
+}
+
+.servicio-card:hover {
+    scale: 1.04;
+    cursor: pointer;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+
+/* ==========================================
+   TEMA OSCURO LOGIN
+   ================================---------- */
+
+body.dark-theme {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .navbar-custom {
+    background-color: var(--primary) !important;
+    border-bottom: 1px solid var(--outline-variant) !important;
+}
+
+body.dark-theme .navbar-custom .logo-biblio,
+body.dark-theme .navbar-custom .nav-link-custom,
+body.dark-theme .navbar-custom .brand-logo {
+    color: var(--on-primary) !important;
+}
+
+/* La palabra web mantiene su color amarillo original definido en variables */
+body.dark-theme .navbar-custom .logo-web {
+    color: var(--secondary-container) !important;
+    /* o puedes usar var(--secondary) según prefieras */
+}
+
+body.dark-theme .nav-link-custom.activa,
+body.dark-theme .nav-link-custom:hover {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .card-custom {
+    background: linear-gradient(rgba(2, 36, 72, 0.85), rgba(2, 36, 72, 0.9)), url('../img/biblioteca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--on-primary) !important;
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .card-custom .card-title,
+body.dark-theme .card-custom .card-title+p,
+body.dark-theme .card-custom p,
+body.dark-theme .card-custom .text-secondary,
+body.dark-theme .card-custom .text-muted,
+body.dark-theme .card-custom .form-label,
+body.dark-theme .card-custom .form-check-label,
+body.dark-theme .card-custom .forgot-link,
+body.dark-theme .card-custom .back-link {
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .form-control-custom,
+body.dark-theme .input-group-text-custom {
+    background-color: var(--primary) !important;
+    border-color: var(--on-primary) !important;
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .form-control-custom::placeholder {
+    color: var(--outline-variant) !important;
+}
+
+body.dark-theme .input-group-text-custom svg,
+body.dark-theme .password-toggle-icon svg,
+body.dark-theme .card-lock-icon {
+    stroke: var(--on-primary) !important;
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .info-box-custom {
+    background-color: var(--primary) !important;
+    border: 1px solid var(--on-primary) !important;
+}
+
+body.dark-theme .info-box-custom p {
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .footer-custom {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+    border-top: 1px solid var(--outline-variant) !important;
+}
+
+body.dark-theme .footer-custom h5,
+body.dark-theme .footer-custom p,
+body.dark-theme .footer-custom li,
+body.dark-theme .footer-custom a,
+body.dark-theme .footer-custom .brand-logo,
+body.dark-theme .footer-custom .logo-biblio {
+    color: var(--on-primary) !important;
+}
+
+/* En el footer la palabra web también mantiene su color amarillo/secundario original */
+body.dark-theme .footer-custom .logo-web {
+    color: var(--secondary-container) !important;
+}
+
+body.dark-theme .theme-toggle-btn {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+    border-color: var(--on-primary) !important;
+}
+
+body.dark-theme .toggle-circle {
+    background: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .btn-custom-primary {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .btn-custom-primary:hover {
+    background-color: var(--surface-container-high) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .btn-admin-access {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .btn-admin-access:hover {
+    background-color: var(--surface-container-high) !important;
+    color: var(--primary) !important;
+}
+
+body.dark-theme .servicio-card>div {
+    background-color: var(--primary) !important;
+    border: 1px solid var(--outline-variant);
+}
+
+body.dark-theme .servicios-header h2,
+body.dark-theme .servicio-card h3 {
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .servicios-header p,
+body.dark-theme .servicio-card p {
+    color: var(--on-primary) !important;
+}
+
+/* Cuadrado de fondo del logo en modo oscuro usando variables */
+body.dark-theme .logo-biblio rect,
+body.dark-theme .brand-logo rect,
+body.dark-theme .card-float-container rect,
+body.dark-theme .navbar-custom svg rect {
+    fill: var(--on-primary) !important;
+}
+
+/* Asegurar que el icono del ojo permanezca visible y con el color correcto en modo oscuro */
+body.dark-theme .password-toggle-icon,
+body.dark-theme .password-toggle-plain {
+    color: var(--on-primary) !important;
+    stroke: var(--on-primary) !important;
+}
+
+body.dark-theme .password-toggle-icon svg,
+body.dark-theme .password-toggle-plain svg {
+    fill: none !important;
+    stroke: var(--on-primary) !important;
+}
+
+/* ==========================================
+   ============= INDEX - MODO OSCURO ========
+   ========================================== */
+
+/* Fondo general de la página y desplazamiento del botón de tema */
+body.dark-theme {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+}
+
+/* Desplazamiento exacto del círculo cuando el body tiene la clase dark-theme */
+body.dark-theme .theme-toggle-btn .toggle-circle {
+    transform: translateX(22px);
+    /* Se desplaza de forma controlada dentro del botón */
+}
+
+/* 1. Navbar del Index */
+body.dark-theme .navbar-custom {
+    background-color: var(--primary) !important;
+    border-bottom: 1px solid var(--outline-variant) !important;
+}
+
+body.dark-theme .navbar-custom .logo-biblio,
+body.dark-theme .navbar-custom .nav-link-custom,
+body.dark-theme .navbar-custom .brand-logo {
+    color: var(--on-primary) !important;
+}
+
+/* La palabra web mantiene su color amarillo original */
+body.dark-theme .navbar-custom .logo-web {
+    color: var(--secondary-container) !important;
+}
+
+body.dark-theme .nav-link-custom.activa,
+body.dark-theme .nav-link-custom:hover {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+/* 2. Tarjetas de Servicios del Index */
+body.dark-theme .servicio-card>div {
+    background-color: var(--primary) !important;
+    border: 1px solid var(--outline-variant) !important;
+}
+
+body.dark-theme .servicios-header h2,
+body.dark-theme .servicio-card h3,
+body.dark-theme .servicios-header p,
+body.dark-theme .servicio-card p {
+    color: var(--on-primary) !important;
+}
+
+/* 3. Tarjeta de Horarios y Tabla del Index */
+body.dark-theme .container .card {
+    background-color: var(--primary) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+body.dark-theme .card-header,
+body.dark-theme .card-footer {
+    background-color: var(--primary-container) !important;
+    color: var(--on-primary) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+body.dark-theme .card-header h4,
+body.dark-theme .card-header p {
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .table {
+    color: var(--on-primary) !important;
+    background-color: transparent !important;
+}
+
+body.dark-theme .table thead,
+body.dark-theme .table tbody tr,
+body.dark-theme .table th,
+body.dark-theme .table td {
+    background-color: transparent !important;
+    color: var(--on-primary) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+/* 4. Sección de llamada a la acción / Aside del Index */
+body.dark-theme .container-lg aside.bg-primary {
+    background-color: var(--primary-container) !important;
+    border: 1px solid var(--outline-variant);
+}
+
+/* 5. Footer del Index */
+body.dark-theme .footer-custom {
+    background-color: var(--primary) !important;
+    color: var(--on-primary) !important;
+    border-top: 1px solid var(--outline-variant) !important;
+}
+
+body.dark-theme .footer-custom h5,
+body.dark-theme .footer-custom p,
+body.dark-theme .footer-custom li,
+body.dark-theme .footer-custom a,
+body.dark-theme .footer-custom .brand-logo,
+body.dark-theme .footer-custom .logo-biblio {
+    color: var(--on-primary) !important;
+}
+
+body.dark-theme .footer-custom .logo-web {
+    color: var(--secondary-container) !important;
+}
+
+/* 6. Botones del botón de tema y controles en el Index */
+body.dark-theme .theme-toggle-btn {
+    background-color: var(--on-primary) !important;
+    color: var(--primary) !important;
+    border-color: var(--on-primary) !important;
+}
+
+body.dark-theme .toggle-circle {
+    background: var(--on-primary) !important;
+    color: var(--primary) !important;
+}
+
+/* 7. Cuadrados de fondo de los logos de los libros en el Index */
+body.dark-theme .logo-biblio rect,
+body.dark-theme .brand-logo rect,
+body.dark-theme .navbar-custom svg rect,
+body.dark-theme .footer-custom svg rect {
+    fill: var(--on-primary) !important;
+}
+
+/* ==========================================
+   ============= INDEX - MODO OSCURO ========
+   ========================================== */
+body.dark-theme .card-body h5 {
+    color: var(--on-primary);
+}
+
+body.dark-theme .card-body p {
+    color: var(--outline);
+}
+
+body.dark-theme .card-body>span:first-child {
+    color: var(--outline) !important;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO Y CONTROL DE SCROLL
+   ================================---------- */
+
+/* Asegurar que las imágenes y contenedores se adapten fluidamente */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* En pantallas grandes (computadoras y escritorio), bloqueamos el scroll vertical 
+   para que todo el contenido del login se ajuste exactamente al alto de la pantalla */
+@media (min-width: 992px) {
+
+    /* html, */
+    .body-custom {
+        height: 100vh;
+        /* Evita que aparezca la barra de desplazamiento vertical */
+        margin: 0;
+    }
+
+    /* Contenedor principal que envuelve la estructura para distribuirla de forma fija */
+    .body-custom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .slide-overlay {
+        padding: 2rem 15rem;
+    }
+
+}
+
+/* En pantallas medianas o celulares, permitimos el desplazamiento natural */
+@media (max-width: 991.98px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+
+/* ==========================================
+            ESTILO DE ADMIN PAGE
+    ================================---------- */
+.card {
+    border-radius: .75rem;
+    box-shadow: 0 1px 3px rgba(15, 42, 77, .08);
+}
+
+.card-header {
+    background: transparent;
+}
+
+.encabezado-tabla th {
+    background: var(--bs-tertiary-bg);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.icono-caja {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: .6rem;
+    font-size: 1.3rem;
+}
+
+.icono-dorado {
+    background: rgba(255, 193, 7, .2);
+    color: var(--bw-dorado-oscuro);
+}
+
+.icono-azul {
+    background: rgba(69, 117, 189, .18);
+    color: var(--bw-azul);
+}
+
+.icono-verde {
+    background: rgba(25, 135, 84, .18);
+    color: #198754;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bw-dorado);
+    box-shadow: 0 0 0 .25rem rgba(255, 193, 7, .35);
+}
+
+.admin-page>main,
+.admin-page>section {
+    width: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+    padding-inline: .75rem;
+}
+
+.admin-page>section {
+    margin-bottom: 1.5rem;
+}
+
+body.dark-theme.admin-page .card {
+    background-color: var(--primary);
+    border-color: var(--outline-variant);
+    color: var(--on-primary);
+}
+
+body.dark-theme.admin-page {
+    --bs-secondary-color: var(--inverse-primary);
+    --bs-body-color: var(--on-primary);
+    --bs-emphasis-color: #ffffff;
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-border-color: var(--outline-variant);
+}

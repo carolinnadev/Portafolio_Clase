@@ -1,0 +1,321 @@
+:root {
+    --bg_page: #0f1016;
+    --bg_card: #181a26;
+    --bg_input: #111219;
+    --bg_item: #202334;
+    --bg_item_done: #161924;
+    --text_light: #f0f0f5;
+    --text_muted: #8a8d9f;
+    --accent_neon: #e822fe;
+    --accent_hover: #d018e2;
+    --accent_success: #5cffb1;
+    --accent_warning: #fbbf24;
+    --accent_error: #ff5c5c;
+    --border_subtle: rgba(232, 34, 254, 0.22);
+    --border_box: #2a2d3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg_page);
+    color: var(--text_light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 620px;
+}
+
+.card {
+    background-color: var(--bg_card);
+    border: 1px solid var(--border_subtle);
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.16);
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--accent_neon);
+    text-align: center;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: var(--text_muted);
+    text-align: center;
+    margin-top: -0.55rem;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.field.grow {
+    flex: 1 1 240px;
+}
+
+.field-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.field-input,
+.field-select {
+    background-color: var(--bg_input);
+    color: var(--text_light);
+    border: 1px solid var(--border_box);
+    border-radius: 8px;
+    padding: 0.72rem 0.85rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field-input:focus,
+.field-select:focus {
+    border-color: var(--accent_neon);
+    box-shadow: 0 0 0 3px rgba(232, 34, 254, 0.2);
+}
+
+.action-btn {
+    background-color: var(--accent_neon);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.1rem;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.12s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--accent_hover);
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.status-note {
+    min-height: 1.15rem;
+    font-size: 0.85rem;
+    color: var(--accent_error);
+    font-weight: 500;
+    text-align: center;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+}
+
+.counter-box {
+    font-size: 0.95rem;
+    color: var(--text_light);
+}
+
+.counter-number {
+    color: var(--accent_neon);
+    font-size: 1.1rem;
+}
+
+.filter-group {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--bg_input);
+    color: var(--text_muted);
+    border: 1px solid var(--border_box);
+    border-radius: 7px;
+    padding: 0.42rem 0.75rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.filter-btn:hover {
+    color: var(--text_light);
+    border-color: rgba(232, 34, 254, 0.5);
+}
+
+.filter-btn.activa {
+    background-color: rgba(232, 34, 254, 0.16);
+    color: var(--accent_neon);
+    border-color: var(--accent_neon);
+}
+
+.hover-banner {
+    background-color: var(--bg_input);
+    border: 1px solid var(--border_box);
+    border-radius: 8px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.84rem;
+    color: var(--text_muted);
+    text-align: center;
+    min-height: 2.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.task-item {
+    background-color: var(--bg_item);
+    border: 1px solid var(--border_box);
+    border-left: 4px solid var(--accent_neon);
+    border-radius: 10px;
+    padding: 0.8rem 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.15s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateX(3px);
+    border-color: rgba(232, 34, 254, 0.5);
+}
+
+.task-item.completada {
+    background-color: var(--bg_item_done);
+    border-left-color: var(--accent_success);
+    opacity: 0.82;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+}
+
+.task-name {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--text_light);
+    word-break: break-word;
+}
+
+.task-item.completada .task-name {
+    text-decoration: line-through;
+    color: var(--text_muted);
+}
+
+.priority-badge {
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.18rem 0.5rem;
+    border-radius: 5px;
+}
+
+.prioridad-baja {
+    background-color: rgba(92, 255, 177, 0.14);
+    color: var(--accent_success);
+}
+
+.prioridad-media {
+    background-color: rgba(251, 191, 36, 0.15);
+    color: var(--accent_warning);
+}
+
+.prioridad-alta {
+    background-color: rgba(255, 92, 92, 0.16);
+    color: var(--accent_error);
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.45rem;
+    flex-shrink: 0;
+}
+
+.complete-btn,
+.delete-btn {
+    border-radius: 7px;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.complete-btn {
+    background-color: transparent;
+    color: var(--accent_success);
+    border: 1px solid var(--accent_success);
+}
+
+.complete-btn:hover {
+    background-color: rgba(92, 255, 177, 0.14);
+}
+
+.task-item.completada .complete-btn {
+    background-color: rgba(92, 255, 177, 0.16);
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: var(--text_muted);
+    border: 1px solid var(--border_box);
+}
+
+.delete-btn:hover {
+    color: var(--accent_error);
+    border-color: var(--accent_error);
+}
+
+.empty-note {
+    font-size: 0.88rem;
+    color: var(--text_muted);
+    text-align: center;
+    padding: 0.6rem 0;
+}

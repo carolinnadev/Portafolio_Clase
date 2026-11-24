@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Acceso de administrador - BiblioWeb</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100 body-custom">
+
+        <header class="navbar navbar-expand-lg navbar-custom shadow-sm px-4">
+            <section class="container-fluid p-0">
+                <section class="d-flex align-items-center gap-3">
+                    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold brand-logo m-0" href="#">
+                        <!-- SVG Icono del Libro con fondo cuadrado azul y bordes redondeados -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" class="logo-book-svg">
+                            <rect width="36" height="36" rx="8" fill="#022448" />
+                            <g transform="translate(10, 10)" fill="#845400">
+                                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                            </g>
+                        </svg>
+                        <span class="d-inline-flex"><span class="logo-biblio">Biblio</span><span class="logo-web">Web</span></span>
+                    </a>
+                    <ul class="navbar-nav d-flex flex-row gap-2 mb-0">
+                        <li class="nav-item"><a class="nav-link nav-link-custom px-2" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom px-2" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom activa px-2" href="login.html">Acceso Administrador</a></li>
+                    </ul>
+                </section>
+                
+                <section class="d-flex align-items-center gap-3 ms-auto">
+                    <button class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema">
+                        <!-- Icono Sol -->
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+
+                        <!-- Indicador circular activo -->
+                        <div class="toggle-circle">
+                            <!-- Icono Luna -->
+                            <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </div>
+                    </button>
+                </section>
+            </section>
+        </header>
+
+        <main class="container my-auto py-5">
+            <section class="row justify-content-center">
+                <!-- Añadido mt-5 para dar espacio superior al elemento flotante -->
+                <article class="col-md-6 col-lg-5 mt-5">
+                    <section class="card card-custom shadow-sm p-4 rounded-4 position-relative overflow-visible">
+                        
+                        <!-- Elemento gráfico superior flotante -->
+                        <div class="card-float-container">
+                            <img src="../img/libro.png" alt="" class="card-float-img">
+                        </div>
+
+                        <section class="text-center mb-4 pt-3">
+                            <h1 class="h3 fw-bold card-title">Acceso de administrador</h1>
+                            <p class="text-secondary small fw-semibold">Portal de gestión interna y servicios bibliotecarios</p>
+                        </section>
+
+                        <!-- Mensaje de error (oculto por defecto para JS) -->
+                        <section id="authErrorAlert" class="alert alert-custom-error d-none align-items-center py-2 mb-3" role="alert">
+                            <section class="small">
+                                <strong>Error de autenticación</strong><br>
+                                Correo o contraseña incorrectos
+                            </section>
+                        </section>
+
+                        <form id="loginForm">
+                            <section class="mb-3">
+                                <label for="email" class="form-label small fw-bold">Correo electrónico</label>
+                                <section class="input-group">
+                                    <span class="input-group-text input-group-text-custom">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control form-control-custom" id="email" placeholder="admin@biblioweb.test" required>
+                                </section>
+                            </section>
+
+                            <section class="mb-3">
+                                <section class="d-flex justify-content-between align-items-center mb-1">
+                                    <label for="password" class="form-label small fw-bold mb-0">Contraseña</label>
+                                    <a href="#" class="small text-decoration-none forgot-link">¿Olvidaste tu contraseña?</a>
+                                </section>
+                                <section class="input-group position-relative">
+                                    <span class="input-group-text input-group-text-custom">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="password" class="form-control form-control-custom" id="password" placeholder="Ingresa tu contraseña: Admin123" style="padding-right: 2.5rem; border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" required>
+                                    <span class="position-absolute top-50 end-0 translate-middle-y me-3 password-toggle-plain" id="togglePasswordIcon" role="button" aria-label="Mostrar/Ocultar contraseña" style="z-index: 5; cursor: pointer;">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </span>
+                                </section>
+                            </section>
+
+                            <section class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label small" for="remember">Recordar sesión en este equipo</label>
+                            </section>
+
+                            <button type="submit" class="btn btn-custom-primary w-100 py-2 mb-3 rounded-3">Ingresar &rarr;</button>
+                        </form>
+
+                        <section class="card info-box-custom p-3 mb-3 rounded-3">
+                            <section class="d-flex gap-2 align-items-center">
+                                <span>🔒</span>
+                                <p class="small text-muted mb-0">Acceso restringido únicamente a personal bibliotecario autorizado con credenciales activas.</p>
+                            </section>
+                        </section>
+
+                        <section class="text-center">
+                            <a href="#" class="small text-decoration-none back-link">&larr; Volver al Inicio de BiblioWeb</a>
+                        </section>
+                    </section>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer-custom border-top py-5 mt-auto px-4">
+            <section class="container-fluid p-0">
+                <section class="row g-4">
+                    <article class="col-md-4">
+                        <section class="fw-bold brand-logo mb-2 d-flex align-items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" class="logo-book-svg">
+                                <rect width="36" height="36" rx="8" fill="#022448" />
+                                <g transform="translate(10, 10)" fill="#845400">
+                                    <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                                </g>
+                            </svg>
+                            <span class="d-inline-flex"><span class="logo-biblio">Biblio</span><span class="logo-web">Web</span></span>
+                        </section>
+                        <div class="d-inline-block text-start" style="max-width: 320px;">
+                            <p class="text-muted small mb-0">Plataforma institucional de gestión y consulta bibliográfica pública. Espacio abierto a la investigación, preservación y conocimiento cívico.</p>
+                        </div>
+                    </article>
+
+                    <article class="col-md-4 text-center">
+                        <h5 class="h6 fw-bold mb-3">Horarios de Atención</h5>
+                        <div class="d-inline-block text-start">
+                            <p class="text-muted small mb-1">Lunes a Viernes: 08:00 - 20:00 hrs</p>
+                            <p class="text-muted small mb-1">Sábados: 09:00 - 14:00 hrs</p>
+                            <p class="text-muted small mb-1">Domingos y Feriados: Cerrado</p>
+                            <p class="text-muted small mb-0">Préstamo interbibliotecario: Sala General</p>
+                        </div>
+                    </article>
+
+                    <article class="col-md-4 text-center">
+                        <h5 class="h6 fw-bold mb-3">Enlaces de Ayuda</h5>
+                        <div class="d-inline-block text-start">
+                            <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Guía del Usuario</a></p>
+                            <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Reglamento de Sala</a></p>
+                            <p class="text-muted small mb-1"><a href="#" class="text-decoration-none text-muted">Mesa de Ayuda</a></p>
+                            <p class="text-muted small mb-0"><a href="#" class="text-decoration-none text-muted">Portal de Personal</a></p>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="border-top pt-4 mt-4 d-flex justify-content-between flex-column flex-md-row text-muted small">
+                    <p class="mb-0">&copy; 2024 Red de Bibliotecas Públicas BiblioWeb. Todos los derechos reservados.</p>
+                    <p class="mb-0">Sistema Integrado de Gestión Bibliotecaria</p>
+                </section>
+            </section>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

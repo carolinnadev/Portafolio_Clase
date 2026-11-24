@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f1016;
+    color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: #181a26;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 34, 254, 0.15);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(232, 34, 254, 0.2);
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e822fe;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input {
+    background: #111219;
+    border: 1px solid #2a2d3d;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #e822fe;
+}
+
+button {
+    background: #e822fe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #d018e2;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.mensaje-salida {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+}
+
+.error { color: #ff5c5c; }
+.exito { color: #5cffb1; font-weight: 500; }
